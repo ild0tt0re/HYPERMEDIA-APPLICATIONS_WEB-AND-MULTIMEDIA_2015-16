@@ -1,1 +1,1 @@
-# Progetto di Hypermedia Applications (Web and Multimedia) Parte 2: Documento di Tecnologia
+# HYP 2015-16 project – PART 2 (Technology)
