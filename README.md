@@ -1,1 +1,1 @@
-# HYPERMEDIA-APPLICATIONS_WEB-AND-MULTIMEDIA_2015-16
+# Progetto di Hypermedia Applications (Web and Multimedia) Parte 2: Documento di Tecnologia
