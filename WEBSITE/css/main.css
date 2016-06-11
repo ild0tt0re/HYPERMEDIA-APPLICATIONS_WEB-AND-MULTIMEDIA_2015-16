@@ -50,6 +50,8 @@ header .cart-icon .cart-p {
 
 .navbar-nav > li > a:hover {
     background-image: -webkit-linear-gradient(top, #dbdbdb 0, #e2e2e2 100%);
+    background-image: -moz-linear-gradient(top, #dbdbdb 0, #e2e2e2 100%);
+    background-image: -o-linear-gradient(top, #dbdbdb 0, #e2e2e2 100%);
 }
 
 .navbar-brand {
