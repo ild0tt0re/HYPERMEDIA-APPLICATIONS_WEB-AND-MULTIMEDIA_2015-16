@@ -56,6 +56,11 @@ header .cart-icon .cart-p {
     padding: 5px 15px;
 }
 
+.navbar-brand>img {
+    margin-top: 6px;
+    height: 30px;
+}
+
 .navbar-default {
     background-image: none;
 }
@@ -84,6 +89,7 @@ header .cart-icon .cart-p {
 
 #carousel-home .carousel-caption {
     padding-bottom: 20px;
+    background: rgba(255,255,255,0.2);
 }
 
 main .thumb-home-left img {
@@ -98,16 +104,17 @@ main .thumb-home-right img {
 }
 
 .caption-in-thumb {
-    top: 5px;
     position: absolute;
     color: #fff;
 }
 
 .thumb-home-left .caption-in-thumb {
+    top: 5px;
     left: 20px;
 }
 
 .thumb-home-right .caption-in-thumb {
+    top: 45px;
     right: 45px;
 }
 
@@ -116,9 +123,11 @@ section {
 }
 
 footer {
-    background-color: #004990;
-    min-height: 100px;
-}
+     background-color: #004990;
+     min-height: 50px;
+     color: #fff;
+    padding-top: 16px;
+ }
 
 /*Utility*/
 
