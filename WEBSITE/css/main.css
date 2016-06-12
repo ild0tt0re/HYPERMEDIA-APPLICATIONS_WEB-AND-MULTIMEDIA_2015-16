@@ -242,6 +242,23 @@ footer {
     -moz-border-radius:0;
     border-radius:0;
 }
+
+.btn-triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-color: transparent transparent #337ab7 transparent;
+    border-width: 0 0 40px 45px;
+    border-style: solid;
+}
+
+.btn-triangle .glyphicon-arrow-right {
+    position: absolute;
+    top: 20px;
+    right: 6px;
+    color: white;
+}
+
 /* ---------------------------------
  * TOPIC
  * ---------------------------------*/
