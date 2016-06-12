@@ -211,7 +211,37 @@ footer {
     margin-right: 10px;
 }
 
+.card {
+    padding: 0;
+}
 
+.card section {
+    border: 1px solid #eee;
+    margin: 4px;
+    box-shadow: 0 0 5px 2px #eee;
+    padding: 10px 10px 0;
+}
+
+.card section img {
+    margin-bottom: 20px;
+    height: 150px;
+}
+
+.card p {
+    margin-top:16px;
+}
+
+.btn-card {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.btn-card .btn {
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+}
 /* ---------------------------------
  * TOPIC
  * ---------------------------------*/
