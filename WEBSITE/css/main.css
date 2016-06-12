@@ -188,11 +188,27 @@ footer {
     width: 100%;
 }
 
+.subnav-container {
+    border-bottom: 1px solid rgba(200,200,200,0.5);
+    box-shadow: 0 5px 10px rgba(200,200,200,0.6);
+}
+
 .sub-nav .nav-pills a {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    border-bottom-right-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-nav .nav-pills a:hover{
+    /*TODO: al mouse hover coloro i glyph-icon*/
+}
+
+.subnav-container .sub-nav .glyphicon {
+    font-size: 30px;
+    margin-right: 10px;
 }
 
 
