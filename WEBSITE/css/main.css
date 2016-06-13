@@ -189,8 +189,8 @@ footer {
 }
 
 .subnav-container {
-    border-bottom: 1px solid rgba(200,200,200,0.5);
-    box-shadow: 0 5px 10px rgba(200,200,200,0.6);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    box-shadow: 0 5px 10px rgba(200, 200, 200, 0.6);
 }
 
 .sub-nav .nav-pills a {
@@ -202,7 +202,7 @@ footer {
     justify-content: center;
 }
 
-.sub-nav .nav-pills a:hover{
+.sub-nav .nav-pills a:hover {
     /*TODO: al mouse hover coloro i glyph-icon*/
 }
 
@@ -228,7 +228,7 @@ footer {
 }
 
 .card p {
-    margin-top:16px;
+    margin-top: 16px;
 }
 
 .btn-card {
@@ -238,9 +238,9 @@ footer {
 }
 
 .btn-card .btn {
-    -webkit-border-radius:0;
-    -moz-border-radius:0;
-    border-radius:0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
 }
 
 .btn-triangle {
@@ -260,8 +260,33 @@ footer {
 }
 
 /* ---------------------------------
- * TOPIC
+ * BY-CATEGORY
  * ---------------------------------*/
+
+.card-filter {
+    padding-right: 20px;
+}
+
+.filter-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filter-header .media-filter{
+    height:50px;
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+.filter-body {
+    /*TODO: check if obsolete*/
+
+}
+
+.col-md-4 .media {
+    text-align: center;
+}
 
 /* ---------------------------------
  * TRANSITION
