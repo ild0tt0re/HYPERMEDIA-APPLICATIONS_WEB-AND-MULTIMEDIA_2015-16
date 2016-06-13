@@ -113,8 +113,11 @@ header .cart-icon .cart-p {
 }
 
 #carousel-home .carousel-caption {
-    padding-bottom: 20px;
+    padding: 0;
+    padding-bottom:10px;
     background: rgba(255, 255, 255, 0.2);
+    right: 30%;
+    left: 30%;
 }
 
 main {
