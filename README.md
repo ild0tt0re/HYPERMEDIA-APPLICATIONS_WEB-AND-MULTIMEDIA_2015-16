@@ -1,13 +1,12 @@
-# Progetto di Hypermedia Applications (Web and Multimedia) <br>Parte 2: Documento di Design
+# Progetto di Hypermedia Applications (Web and Multimedia) <br> - Parte 2: Implementazione Tecnologica
+
+![TIM Home](WEBSITE/img/preview/home.png)
 
 ### Membri del Gruppo:
  NOME | MATRICOLA | EMAIL
 :----| ---------:|------:
 Abate Salvatore | 797577 | salvatore.abate@mail.polimi.it
 Annunziata Angelo | 853643 | angelo.annunziata@mail.polimi.it
-
-
-![TIM Home](WEBSITE/img/preview/home.png)
 
 ### Data di consegna: 01/07/2016
 ###Breve descrizione del progetto:
