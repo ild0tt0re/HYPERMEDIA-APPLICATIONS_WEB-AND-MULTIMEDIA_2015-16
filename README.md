@@ -1,4 +1,5 @@
-# Progetto di Hypermedia Applications <br>(Web and Multimedia) <br> Parte 2: Implementazione Tecnologica
+# Progetto di Hypermedia Applications <br>(Web and Multimedia)
+## - Parte 2: Implementazione Tecnologica
 
 ### Membri del Gruppo:
  NOME | MATRICOLA | EMAIL
@@ -30,4 +31,5 @@ Lato Server:
 - AJAX
 ```
 
+### Screenshot
 ![TIM Home](WEBSITE/img/preview/home.png)
