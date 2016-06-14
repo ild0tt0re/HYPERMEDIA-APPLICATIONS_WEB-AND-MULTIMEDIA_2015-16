@@ -345,11 +345,14 @@ footer {
 
 .topic-description .tab-pane {
     padding: 30px;
+    box-shadow: 0 2px 10px 1px #eee;
 }
 
 .topic-description .tab-content {
     border: 1px solid #eee;
+    border-top:0;
 }
+
 
 /* ---------------------------------
  * TRANSITION
