@@ -1,9 +1,35 @@
-# HYP 2015-16 project – PART 2 (Technology)
+# Progetto di Hypermedia Applications (Web and Multimedia) <br>Parte 2: Documento di Design
 
-#### SCREENSHOT DEL SITO
+### Membri del Gruppo:
+ NOME | MATRICOLA | EMAIL
+:----| ---------:|------:
+Abate Salvatore | 797577 | salvatore.abate@mail.polimi.it
+Annunziata Angelo | 853643 | angelo.annunziata@mail.polimi.it
+
 
 ![TIM Home](WEBSITE/img/preview/home.png)
 
-![TIM Home](WEBSITE/img/preview/product.png)
+### Data di consegna: 01/07/2016
+###Breve descrizione del progetto:
 
-![TIM Home](WEBSITE/img/preview/by-category.png)
+Per l'implementazione tecnologica sono state utilizzate le seguenti tecnologie
+
+Lato Client:
+```
+- HTML5
+    - HTML5 boilerplate
+- CSS3
+    - SASS preprocessor
+- JavaScript
+    - jQuery
+```
+
+
+Lato Server:
+```
+- APACHE
+- MYSQL
+- PHP
+- AJAX
+```
+
