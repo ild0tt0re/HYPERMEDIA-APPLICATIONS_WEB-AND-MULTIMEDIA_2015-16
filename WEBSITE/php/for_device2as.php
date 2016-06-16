@@ -1,18 +1,22 @@
 <?php
         if($_SERVER["REQUEST_METHOD"]=="POST"){
-            $nome_assistenza=$_POST["nome_assistenza"];
-			
+			$nome_assistenza= isset($_POST["nome_assistenza"])?$_POST["nome_assistenza"]:null;
+			if ($nome_assistenza==null){
+				die();
+			}
 			//connessione al DataBase
 			//$conn=new mysqli("localhost","prova","ciaocane","prima_prova");
 			$conn=new mysqli("localhost","root","","mytim");
 			//controllo avvenuta connessione
 			if(mysqli_connect_errno()){
 				$errore = array("marca"=>"Problema di connessione al db", "nome"=>"Problema di connessione al db","image"=>"Problema di connessione al db","prezzo"=>0,"vecchio_prezzo"=>0,"intro"=>"Problema di connessione al db");
-				echo json_encode($errore);
-				exit();
+				die ( json_encode($errore) );
 			}
 			
-			//prendo i dati dalla tabella faq
+			//sistemo la stringa $nome_assistenza per inserirla nella query
+			$nome_assistenza = $conn->real_escape_string( htmlentities($nome_assistenza) );
+			
+			//prendo i dati dalla tabella for_device_2as
 			$query="select marca, nome, image, prezzo, vecchio_prezzo, intro from device join for_device_2as on device.id_device=for_device_2as.id_device where nome_assistenza='$nome_assistenza'";
 			$result=$conn->query($query);
 			
@@ -20,6 +24,10 @@
 				$array_righe = array();
 				
 				while($riga=$result->fetch_array(MYSQL_ASSOC)){
+					//decodifico i campi della tabella che contengono tag html codificati
+					foreach( $riga as $chiave=>$valore ){
+						$riga[$chiave]=html_entity_decode($valore);
+					}
 					$array_righe[] = $riga;
 				}
 				echo json_encode($array_righe);//esporta in json
