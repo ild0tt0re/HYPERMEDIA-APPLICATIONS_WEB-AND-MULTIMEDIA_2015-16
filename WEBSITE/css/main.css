@@ -23,7 +23,6 @@
     margin: 0;
 }
 
-
 /* ---------------------------------
  * HOME
  * ---------------------------------*/
@@ -120,7 +119,7 @@ header .navbar-nav > li > a:hover {
 
 #carousel-home .carousel-caption {
     padding: 0;
-    padding-bottom:10px;
+    padding-bottom: 10px;
     background: rgba(255, 255, 255, 0.2);
     right: 30%;
     left: 30%;
@@ -282,8 +281,8 @@ footer {
     margin-bottom: 10px;
 }
 
-.filter-header .media-filter{
-    height:50px;
+.filter-header .media-filter {
+    height: 50px;
     margin-bottom: 0;
     margin-right: 15px;
 }
@@ -301,24 +300,23 @@ footer {
  * TOPIC
  * ---------------------------------*/
 
-
 .topic-head {
     display: flex;
 }
 
-.topic-head img{
+.topic-head img {
     height: 400px;
 }
 
-.media-quick-description{
+.media-quick-description {
     margin-top: 10px;
 }
 
-.media-quick-description h3{
+.media-quick-description h3 {
     margin-bottom: 30px;
 }
 
-.media-quick-description span{
+.media-quick-description span {
     margin-left: 5px;
 }
 
@@ -332,7 +330,7 @@ footer {
     bottom: 20px;
 }
 
-.add-to-cart p{
+.add-to-cart p {
     color: #51b5f7;
     font-family: fantasy;
     font-weight: bold;
@@ -340,7 +338,7 @@ footer {
 }
 
 .topic-description {
-    margin:80px;
+    margin: 80px;
 }
 
 .topic-description .tab-pane {
@@ -350,10 +348,117 @@ footer {
 
 .topic-description .tab-content {
     border: 1px solid #eee;
-    border-top:0;
+    border-top: 0;
 }
 
+/* ---------------------------------
+ * Carousel promotions box-slider
+ * ---------------------------------*/
+
+/* Global */
+.container {
+    max-width: 960px;
+}
+
+↓
+body {
+    background: #fff;
+    padding: 40px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -ms-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
+    transition: all 150ms ease;
+}
+
+a:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+    filter: alpha(opacity=50); /* IE7 */
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+/* Container */
+.container-fluid {
+    background: #FFFFFF;
+    margin: 40px auto 10px;
+    padding: 20px 40px 0;
+    max-width: 960px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Header */
+.page-header {
+    background: #f9f9f9;
+    margin: -30px -40px 40px;
+    padding: 20px 40px;
+    border-top: 4px solid #ccc;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.page-header h3 {
+    line-height: 0.88rem;
+    color: #000;
+}
+
+/* Thumbnail Box */
+.caption h4 {
+    font-size: 1.25rem;
+    color: #444;
+}
+
+.caption p {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.btn.btn-mini {
+    font-size: 0.63rem;
+}
+
+/* Carousel Control
+.control-box {
+    text-align: right;
+    width: 100%;
+    }*/
+.carousel-control {
+    color: #000 !important;
+    border: 0px;
+    border-radius: 0px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 18px;
+    opacity: 0.5;
+    padding: 4px 0px 0px;
+    position: absolute;
+    height: 30px;
+    width: 15px;
+    top: 0;
+    background: none !important;
+}
+
+/* Mobile Only */
+@media (max-width: 767px) {
+    .page-header, .control-box {
+        text-align: center;
+    }
+}
+
+@media (max-width: 479px) {
+    .caption {
+        word-break: break-all;
+    }
+}
 
 /* ---------------------------------
- * TRANSITION
+ * TRANSITION PAGE
  * ---------------------------------*/

@@ -9,4 +9,11 @@ $(document).on('keyup', function(e) {
     else if(e.which == 37){
         $('.carousel').carousel('prev');
     }
+
+    /*
+     control for promotions box-slider
+     */
+    $('.carousel').carousel({
+        interval: 6000
+    })
 });
