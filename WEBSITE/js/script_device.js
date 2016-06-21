@@ -1,26 +1,19 @@
 $("document").ready(function() {
-    var query_result;
-    var id_device;
     $.ajax({
         method: "POST",
         dataType: "json",
         crossDomain: true,
         url: "php/device.php",
         data: {
-            marca: "Decoder",
-            nome: "TIMvision"
+            id: variabile_id(),
         },
         success: function(response) {
-            id_device=response['id_device'];
-            $("img").attr("src",response['image']);
-            $("#titolo").append(""+response['marca']);
-            $("#titolo").append(" "+response['nome']);
-            $("#caratteristiche").append(""+response['caratteristiche']);
-            $("#descrizione").append(response['descrizione']);
-            $("#specifiche").append(response['specifiche']);
-            
-            $(".risultato").html("sono in success");//da togliere
-            
+            $("img.media-object").attr("src",response['image']);
+            $("h3.media-heading").html(""+response['marca']+" "+response['nome']);
+            $("#caratteristiche").html(""+response['caratteristiche']);
+            $("#prezzo").html(creaPrezzo(response['vecchio_prezzo'],response['prezzo'],response['rate']));
+            $("#home").html(response['descrizione']);
+            $("#profile").html(response['specifiche']);            
         },
         error: function(request, error) {
             $(".risultato").html("SONO IN ERROR");//da togliere
@@ -30,47 +23,35 @@ $("document").ready(function() {
     return false;
 });
 
-
-
-/*
-Esempio di riferimento
-
-$(document).ready(documentReady);
-
-function documentReady(){
-    console.log("I'm ready");
-
-    $(".loadmore").on("click",loadMoreClicked);
-
+function variabile_gruppo(){
+    var array_variabili=getVariables();
+    var variabile_del_get = array_variabili[0].split("=",2);
+    return variabile_del_get[1];
 }
 
-
-function loadMoreClicked(){
-
-    console.log("You clicked load more");
-    
-    var id=$(".loadmore").attr("id");
-    
-    $.ajax({
-        method: "POST",
-        //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "getDescription.php", //Relative or absolute path to file.php file
-        data: {pt:id},
-        success: function(response) {
-            $(".contents").html(" "+response);
-        },
-        error: function(request,error) 
-        {
-            console.log("Error");
-        }
-    });
+function variabile_categoria() {
+    var array_variabili=getVariables();
+    var variabile_del_get = array_variabili[1].split("=",2);
+    return variabile_del_get[1];
 }
 
-*/
+function variabile_id() {
+    var array_variabili=getVariables();
+    var variabile_del_get = array_variabili[2].split("=",2);
+    return variabile_del_get[1];
+}
 
-
-
-
-
-
+function creaPrezzo(vecchio_prezzo, prezzo, rate){
+    var stringa_prezzo="";
+    if (vecchio_prezzo != ""){
+        stringa_prezzo+="<span class='scontato'>"+vecchio_prezzo+"€</span> ";
+    }
+    
+    stringa_prezzo+=""+prezzo+"€ ";
+    
+    if(rate != ""){
+        stringa_prezzo+=" a rate di "+rate+"€/mese";
+    }
+    
+    return stringa_prezzo;
+}

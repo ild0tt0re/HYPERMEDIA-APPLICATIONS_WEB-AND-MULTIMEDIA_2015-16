@@ -25,6 +25,10 @@
 
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/getVariables.js" type="text/javascript"></script>
+    <script src="js/get_categorie_prodotti.js" type="text/javascript"></script>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -89,8 +93,8 @@
 <!-- Head-Banner  -->
 <div class="row">
     <div class="col-md-5 head-banner-left">
-        <h2>PRODOTTI</h2>
-        <p>Smartphone, Tablet, Telefoni per la casa<br> anche a rate sul conto TIM</p>
+        <h2 id="titolo"></h2>
+        <p id="intro_banner">Smartphone</p>
     </div>
     <div class="col-md-7 head-banner-right no-padding">
         <img src="img/head-banner-prodotti.jpg">
@@ -102,15 +106,14 @@
     <div class="container">
         <div class="row sub-nav">
             <ul class="nav nav-pills nav-justified">
-                <li role="presentation"><a href="group-of-topic.html"><span
-                        class="glyphicon glyphicon-phone"></span></span> Smartphone e Telefoni</a></li>
-                <li role="presentation"><a href="#"><span class="glyphicon glyphicon-folder-close"></span> Tablet e
-                    Computer</a></li>
-                <li role="presentation"><a href="#"><span class="glyphicon glyphicon-hdd"></span> Modem e Networking</a>
+                <li role="presentation"><a class="link1"><span
+                        class="glyphicon glyphicon-phone"></span> <p class="categoria1"></p></a></li>
+                <li role="presentation"><a class="link2"><span class="glyphicon glyphicon-folder-close"></span> <p class="categoria2"></p></a></li>
+                <li role="presentation"><a class="link3"><span class="glyphicon glyphicon-hdd"></span> <p class="categoria3"></p> </a>
                 </li>
-                <li role="presentation"><a href="#"><span class="glyphicon glyphicon-film"></span> TV e Smart Living</a>
+                <li role="presentation"><a class="link4"><span class="glyphicon glyphicon-film"></span> <p class="categoria4"></p></a>
                 </li>
-                <li role="presentation"><a href="#"><span class="glyphicon glyphicon-tags"></span>&nbsp Outlet</a></li>
+                <li role="presentation"><a class="link5"><span class="glyphicon glyphicon-tags"></span>&nbsp <p class="categoria5"></p></a></li>
             </ul>
         </div>
     </div>
@@ -123,19 +126,20 @@
                 <section>
                     <div class="media">
                         <div class="media-left">
-                            <a href="#">
-                                <img class="media-object" src="img/smartphone-category.jpg" alt="...">
+                            <a class="link1" >
+                                <img class="media-object" id="image1" >
                             </a>
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Smartphone e Telefoni</h4>
-                            <p>Telefoni fissi sia tradizionali che cordless e Cellulari e Smartphone</p>
+                            <h4 class="media-heading categoria1"></h4>
+                            <p id="intro1"></p>
                         </div>
                         <!-- Large button group -->
-                        <a href="group-of-topic.html">
-                        <div class="btn-card btn-triangle">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
-                        </div></a>
+                        <a class="link1" >
+                            <div class="btn-card btn-triangle">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </div>
+                        </a>
                     </div>
                 </section>
             </div>
@@ -143,60 +147,20 @@
                 <section>
                     <div class="media">
                         <div class="media-left">
-                            <a href="#">
-                                <img class="media-object" src="img/smartphone-category.jpg" alt="...">
+                            <a class="link2">
+                                <img class="media-object" id="image2" >
                             </a>
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Modem e Networking</h4>
-                            <p>Tutto ciò che ti serve per navigare in Internet</p>
+                            <h4 class="media-heading categoria2"></h4>
+                            <p id="intro2"></p>
                         </div>
                         <!-- Large button group -->
-                        <div class="btn-card btn-triangle">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-6 card">
-                <section>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <img class="media-object" src="img/smartphone-category.jpg" alt="...">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Tablet e Computer</h4>
-                            <p></p>
-                        </div>
-                        <!-- Large button group -->
-                        <div class="btn-card btn-triangle">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-md-6 card">
-                <section>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <img class="media-object" src="img/smartphone-category.jpg" alt="...">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">TV e Smart Living</h4>
-                            <p>Descrizione di prova</p>
-                        </div>
-                        <!-- Large button group -->
-                        <div class="btn-card btn-triangle">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
-                        </div>
+                        <a class="link2">
+                            <div class="btn-card btn-triangle">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </div>
+                        </a>
                     </div>
                 </section>
             </div>
@@ -208,18 +172,66 @@
                 <section>
                     <div class="media">
                         <div class="media-left">
-                            <a href="#">
-                                <img class="media-object" src="img/smartphone-category.jpg" alt="...">
+                            <a class="link3">
+                                <img class="media-object" id="image3" >
                             </a>
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">Media heading</h4>
-                            <p>Descrizione di prova</p>
+                            <h4 class="media-heading categoria3"></h4>
+                            <p id="intro3"></p>
                         </div>
                         <!-- Large button group -->
-                        <div class="btn-card btn-triangle">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
+                        <a class="link3">
+                            <div class="btn-card btn-triangle">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6 card">
+                <section>
+                    <div class="media">
+                        <div class="media-left">
+                            <a class="link4">
+                                <img class="media-object" id="image4">
+                            </a>
                         </div>
+                        <div class="media-body">
+                            <h4 class="media-heading categoria4"></h4>
+                            <p id="intro4"></p>
+                        </div>
+                        <!-- Large button group -->
+                        <a class="link4">
+                            <div class="btn-card btn-triangle">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6 card">
+                <section>
+                    <div class="media">
+                        <div class="media-left">
+                            <a class="link5">
+                                <img class="media-object" id="image5">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading categoria5"></h4>
+                            <p id="intro5"></p>
+                        </div>
+                        <!-- Large button group -->
+                        <a class="link5">
+                            <div class="btn-card btn-triangle">
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </div>
+                        </a>
                     </div>
                 </section>
             </div>
@@ -253,12 +265,13 @@
 <footer>
     <p class="text-center">&copy; TIM Company 2016</p>
 </footer>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
 <script src="js/vendor/bootstrap.min.js"></script>
 
 <script src="js/main.js"></script>
+
 
 </body>
 </html>

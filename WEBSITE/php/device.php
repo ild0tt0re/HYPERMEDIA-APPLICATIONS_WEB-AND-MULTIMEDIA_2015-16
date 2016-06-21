@@ -1,9 +1,8 @@
 <?php
         if($_SERVER["REQUEST_METHOD"]=="POST"){
-            $marca =isset($_POST["marca"])?$_POST["marca"]:null;
-			$nome = isset($_POST["nome"])?$_POST["nome"]:null;
+            $id =isset($_POST["id"])?$_POST["id"]:null;
 			
-			if($marca==null || $nome==null){
+			if($id==null){
 				die();
 			}
 			//connessione al DataBase
@@ -15,17 +14,15 @@
 				die( json_encode($errore) );
 			}
 			
-			//sistemo le stringhe per inserirle nella query
-			$marca = $conn->real_escape_string( htmlentities($marca) );
-			$nome = $conn->real_escape_string( htmlentities($nome) );
+			//preparo la variabile $id per inserirla nella query
+			$id = $conn->real_escape_string( htmlentities($id) );
 	
 			//prendo i dati del device
-			//$query="select id_device,marca,nome,image,caratteristiche,prezzo,rate,vecchio_prezzo,descrizione,specifiche from device where marca='$marca' and nome='$nome'";
-			$query="select id_device,marca,nome,image,caratteristiche,prezzo,rate,vecchio_prezzo,descrizione,specifiche from device where marca='$marca' and nome='$nome'";
+			$query="select marca,nome,image,caratteristiche,prezzo,rate,vecchio_prezzo,descrizione,specifiche from device where id_device='$id'";
 			$result=$conn->query($query);
 			
 			if($result->num_rows > 0){
-				//ho una sola riga della tabella device che ha $marca e $nome specificati
+				//ho una sola riga della tabella device che ha $id e $nome specificati
 				$riga=$result->fetch_array(MYSQL_ASSOC);
 				
 				//decodifico i campi della tabella che contengono tag html codificati

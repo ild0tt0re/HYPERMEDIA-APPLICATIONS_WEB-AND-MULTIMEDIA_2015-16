@@ -25,6 +25,11 @@
 
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/getVariables.js" type="text/javascript"></script>
+    <script src="js/script_device.js" type="text/javascript"></script>
+    
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -99,18 +104,9 @@
                 <div class="media-quick-description">
                     <h3 class="media-heading">Samsung Galaxy S7 Edge</h3>
                     <span>Caratteristiche:</span>
-                    <br>
-                    <ul>
-                        <li>Lte</li>
-                        <li>Bluetooth</li>
-                        <li>WiFi</li>
-                        <li>Progettazione di una semplicità d'uso senza precedenti, grazie a funzionalità avanzate
-                            che
-                            si integrano alla perfezione
-                        <li>Batteria con capacita aumentata, per ricaricare ancora più velocemente</li>
-                    </ul>
+                    <p id="caratteristiche"> </p>
                     <div class="add-to-cart">
-                        <p>699€ a rate di 20€/mese</p>
+                        <p id="prezzo">Prezzo</p>
                         <button type="button" class="btn btn-default btn-sm">Aggiungi al Carrello <span
                                 class="glyphicon glyphicon-shopping-cart"></span></button>
                     </div>
@@ -197,7 +193,7 @@
 <footer>
     <p class="text-center">&copy; TIM Company 2016</p>
 </footer>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
 <script src="js/vendor/bootstrap.min.js"></script>
