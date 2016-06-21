@@ -20,6 +20,10 @@ SET time_zone = "+00:00";
 -- Database: `mytim`
 --
 
+CREATE DATABASE mytim;
+
+USE mytim;
+
 -- --------------------------------------------------------
 
 --
