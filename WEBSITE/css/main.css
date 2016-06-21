@@ -23,6 +23,17 @@
     margin: 0;
 }
 
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+}
+
 /* ---------------------------------
  * HOME
  * ---------------------------------*/
@@ -217,6 +228,10 @@ footer {
 .subnav-container .sub-nav .glyphicon {
     font-size: 30px;
     margin-right: 10px;
+}
+
+.mgot .col-md-9 section{
+    height: 95%;
 }
 
 .card {
