@@ -28,7 +28,7 @@ $("document").ready(function() {
             }
             for(i=0;i<categorie.length;i++){
                 $("#image"+(i+1)).attr("src",immagini_categorie[i]);
-                $(".link"+(i+1)).attr("href","group-of-topic.html?gruppo="+nome_gruppo+"&categoria="+categorie[i]);
+                $(".link"+(i+1)).attr("href","mgot.html?gruppo="+nome_gruppo+"&categoria="+categorie[i]);
                 $(".categoria"+(i+1)).html(""+categorie[i]);
                 $("#intro"+(i+1)).html(""+intro_categorie[i]);
             }
@@ -52,46 +52,3 @@ function variabile_get() {
 //    console.log("Variable: "+variable[0]+" Value: "+variable[1]);
 //    return variable[1];
 }
-
-/*
-Esempio di riferimento
-
-$(document).ready(documentReady);
-
-function documentReady(){
-    console.log("I'm ready");
-
-    $(".loadmore").on("click",loadMoreClicked);
-
-}
-
-
-function loadMoreClicked(){
-
-    console.log("You clicked load more");
-    
-    var id=$(".loadmore").attr("id");
-    
-    $.ajax({
-        method: "POST",
-        //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "getDescription.php", //Relative or absolute path to file.php file
-        data: {pt:id},
-        success: function(response) {
-            $(".contents").html(" "+response);
-        },
-        error: function(request,error) 
-        {
-            console.log("Error");
-        }
-    });
-}
-
-*/
-
-
-
-
-
-
