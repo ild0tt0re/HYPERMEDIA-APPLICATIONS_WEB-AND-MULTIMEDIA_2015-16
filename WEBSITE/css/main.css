@@ -221,6 +221,10 @@ footer {
     justify-content: center;
 }
 
+.sub-nav .nav-pills p {
+    margin: 0;
+}
+
 .sub-nav .nav-pills a:hover {
     /*TODO: al mouse hover coloro i glyph-icon*/
 }
@@ -228,10 +232,6 @@ footer {
 .subnav-container .sub-nav .glyphicon {
     font-size: 30px;
     margin-right: 10px;
-}
-
-.mgot .col-md-9 section{
-    height: 95%;
 }
 
 .card {
@@ -313,6 +313,14 @@ footer {
 
 .nav-justified>li {
     width: 0;
+}
+
+.mgot .col-md-9 section{
+    height: 95%;
+}
+
+.got .row-eq-height section{
+    height: 95%;
 }
 
 /* ---------------------------------

@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mytim`
+-- Database: `my_hyp2016abate7annunziata`
 --
+/*
+CREATE DATABASE my_hyp2016abate7annunziata;
 
-CREATE DATABASE mytim;
-
-USE mytim;
-
+USE my_hyp2016abate7annunziata;
+*/
 -- --------------------------------------------------------
 
 --
