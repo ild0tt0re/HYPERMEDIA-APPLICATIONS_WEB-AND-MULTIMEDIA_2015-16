@@ -5,10 +5,12 @@ function getVariables() {
     //nuova parte
     question_mark[1] = question_mark[1].replace(/%20/g, " ");
     var variables= question_mark[1].split("&");
-    return variables;
-    
-/*  var and_simbol= question_mark[1].split("&");  
-    var variable=and_simbol[0].split("=",2);
-    return variable[1].replace(/%20/g, " ");*/
+    return variables; 
 }
-//getVariable();
+
+//restituisce la variabile del get in posizione position (position=0 => prima variabile del get , 1=>seconda variabile ....)
+function getVariableFromPosition( position ){
+    var array_variabili=getVariables();
+    var variabile_del_get = array_variabili[position].split("=",2);
+    return variabile_del_get[1];
+}
