@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- TODO: Aggiornare il titolo in maniera dinamica-->
+    <title>TIM-Categorie</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- TODO: importare icone aggiuntive glyphicon -->
+    <link rel="stylesheet" href="css/bootstrap.icon-large.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="#">Chi Siamo</a></li>
+                    <li role="presentation"><a href="#">Gruppo Telecom Italia</a></li>
+                </ul>
+            </div>
+            <div class="pull-right">
+                <p class="cart-icon"><span class="glyphicon glyphicon-shopping-cart flip-image"
+                                           aria-hidden="true"></span> <span class="cart-p">Carrello</span></p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img alt="Brand" src="img/logo_tim_2016.png">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">HOME <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="multiple-group-of-topic.html">PRODOTTI</a></li>
+                    <li><a href="#">ASSISTENZA</a></li>
+                    <li><a href="#">SMART LIFE</a></li>
+                    <li><a href="#">PROMOZIONI</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+</header>
+
+<!--Breadcrumb-->
+<div class="container">
+    <ol class="breadcrumb">
+        <li><a href="multiple-group-of-topic.html">Category</a></li>
+        <li><a href="#">Sub-category</a></li>
+    </ol>
+</div>
+
+
+<main class="topic-assistance">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Assistenza Mobile</h2>
+        </div>
+
+        <div class="row topic-description">
+            <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                                                              data-toggle="tab">Descrizione</a></li>
+                    <li role="presentation"><a href="#profile"
+                                               aria-controls="profile"
+                                               role="tab"
+                                               data-toggle="tab">FAQ</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <h3>La tua SIM</h3>
+                        <p>Tutto ció che devi sapere per gestire al meglio la tua SIM</p>
+                        <ul>
+                            <li>.......</li>
+                            <li>.......</li>
+                            <li>.......</li>
+                        </ul>
+                        <p>I tuoi codici PIN e PUK</p>
+                        <ul>
+                            <li>.......</li>
+                            <li>.......</li>
+                            <li>.......</li>
+                        </ul>
+                        <p>Cosa fare in caso di furto e smarrimento</p>
+                        <hr>
+                        <h3>Dispositivi Mobile a rate</h3>
+                        <p>Offriamo un comodo servizio di acquisto dispositivi a rate ...</p>
+                        <a href="#">Scopri tutti i Dispositivi Mobile acquistabili a rate</a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <!-- collapse-panel -->
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                           href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <span class="glyphicon glyphicon-chevron-down"></span>
+                                            Cosa devo fare se ...
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                     aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        Testo da recuperare tramite DB myTim.sql ...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                           data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                           aria-controls="collapseTwo">
+                                            <span class="glyphicon glyphicon-chevron-down"></span>
+                                            Come posso acquistare a rate ...
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                     aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        Testo di prova Testo di prova Testo di provaTesto di prova Testo di provaTesto
+                                        di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di prova
+                                        Testo di prova Testo di prova Testo di provaTesto di prova Testo di provaTesto
+                                        di provaTesto di prova
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                           data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                           aria-controls="collapseThree">
+                                            <span class="glyphicon glyphicon-chevron-down"></span>
+                                            Cosa devo fare se ...
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                     aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        Testo di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di
+                                        provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto
+                                        di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di
+                                        provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto
+                                        di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di
+                                        provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto
+                                        di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di
+                                        provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto
+                                        di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di
+                                        provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto
+                                        di provaTesto di prova
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- /container -->
+
+</main>
+
+
+<footer>
+    <p class="text-center">&copy; TIM Company 2016</p>
+</footer>
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script src="js/getVariables.js" type="text/javascript"></script>
+<script src="js/script_device.js" type="text/javascript"></script>
+
+</body>
+</html>
