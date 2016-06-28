@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2016 at 11:52 PM
+-- Generation Time: Jun 28, 2016 at 10:41 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -40,8 +40,8 @@ CREATE TABLE `assistenza` (
 --
 
 INSERT INTO `assistenza` (`nome`, `categoria`, `image`, `intro`, `descrizione`, `intro_device`) VALUES
-('Mobile', 'Gestione Linea e Servizi', '', '', '&lt;h3&gt;La tua SIM&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Tutto ci&ograve; che devi sapere per gestire al meglio la tua SIM:&lt;/p&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;I codici PIN e PUK: il PIN (Personal Identity Number) &egrave; un codice numerico di 4 cifre che ti consente, se regolarmente impostato, di proteggere il telefonino da utilizzi illeciti. Viene infatti richiesto dal telefonino al momento dell&rsquo;accensione; il codice PIN &egrave; personalizzabile. Il PUK (Personal Unblocking Key) &egrave; un codice di sblocco fisso e non modificabile che serve per sbloccare la SIM a seguito dell''errata digitazione del codice PIN per 3 volte di seguito.&lt;/li&gt;&lt;li&gt;Cosa fare in caso di furto o smarrimento: dovrai tempestivamente bloccare la linea relativa alla SIM presente al suo interno.\r\nSe sei un cliente ricaricabile e sei gi&agrave; registrato alla sezione MyTIM Mobile puoi bloccare la linea direttamente online. Se non sei registrato alla sezione MyTIM Mobile o se sei un cliente in abbonamento dovrai contattare il Servizio Clienti 119. Previa identificazione e verifica della titolarit&agrave; del numero (attraverso la comunicazione di nome, cognome, codice fiscale,...) verr&agrave; immediatamente bloccata la linea al traffico telefonico.&lt;/li&gt;&lt;li&gt;Sostituzione della tua SIM: l&rsquo;operazione di sostituzione SIM ti consente di cambiare la tua SIM e conservare il tuo numero telefonico (sia per clienti ricaricabili che in abbonamento).&lt;/li&gt;&lt;/ul&gt;', '&lt;h3&gt;Dispositivi Mobile a Rate&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Offriamo un comodo servizio di pagamento a Rate per i Dispositivi Mobile. Clicca il link in basso per vedere i modelli disponibili&lt;/p&gt;'),
-('TIMvision', 'Contenuti e Smart Life', '', '', '&lt;h3&gt;TIMvision&lt;/h3&gt;&lt;br&gt;&lt;p&gt;TIMvision &egrave; la nuova risposta alle esigenze di intrattenimento per tutta la famiglia. E&rsquo; la TV interamente on demand di TIM che tramite una connessione ADSL Illimitata o Fibra ti permette di godere di migliaia di titoli: il grande cinema, le serie TV pi&ugrave; appassionanti, i cartoni animati pi&ugrave; amati e tanto altro ancora come documentari, reportage e musica.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;I clienti TIMvision possono accedere a:&lt;/p&gt;&lt;ul&gt;	&lt;li&gt;TIMvision TV&lt;/li&gt;	&lt;li&gt;Videostore&lt;/li&gt;	&lt;li&gt;Free&lt;/li&gt;	&lt;li&gt;Replay TV&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;L''abbonamento TIMvision ti permette di guardare tutti i contenuti su&amp;nbsp;PC,&amp;nbsp;Smart&amp;nbsp;TV o&amp;nbsp;TV con&amp;nbsp;Decoder, tablet e smartphone senza consumare Giga, quando e dove vuoi.&lt;/p&gt;', '&lt;h3&gt;Dispositivi per usare TIMvision&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Oltre al Decoder TIMvision, nella sezione Prodotti puoi trovare anche il Televisore che fa per te.&lt;/p&gt;');
+('Mobile', 'Gestione Linea e Servizi', 'img/assistenza/intro_mobile.jpg', 'Info ed Assistenza per la tua SIM e per i Dispositivi Mobile Acquistabili a Rate', '&lt;h3&gt;La tua SIM&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Tutto ci&ograve; che devi sapere per gestire al meglio la tua SIM:&lt;/p&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;I codici PIN e PUK: il PIN (Personal Identity Number) &egrave; un codice numerico di 4 cifre che ti consente, se regolarmente impostato, di proteggere il telefonino da utilizzi illeciti. Viene infatti richiesto dal telefonino al momento dell&rsquo;accensione; il codice PIN &egrave; personalizzabile. Il PUK (Personal Unblocking Key) &egrave; un codice di sblocco fisso e non modificabile che serve per sbloccare la SIM a seguito dell''errata digitazione del codice PIN per 3 volte di seguito.&lt;/li&gt;&lt;li&gt;Cosa fare in caso di furto o smarrimento: dovrai tempestivamente bloccare la linea relativa alla SIM presente al suo interno.\r\nSe sei un cliente ricaricabile e sei gi&agrave; registrato alla sezione MyTIM Mobile puoi bloccare la linea direttamente online. Se non sei registrato alla sezione MyTIM Mobile o se sei un cliente in abbonamento dovrai contattare il Servizio Clienti 119. Previa identificazione e verifica della titolarit&agrave; del numero (attraverso la comunicazione di nome, cognome, codice fiscale,...) verr&agrave; immediatamente bloccata la linea al traffico telefonico.&lt;/li&gt;&lt;li&gt;Sostituzione della tua SIM: l&rsquo;operazione di sostituzione SIM ti consente di cambiare la tua SIM e conservare il tuo numero telefonico (sia per clienti ricaricabili che in abbonamento).&lt;/li&gt;&lt;/ul&gt;', '&lt;h3&gt;Dispositivi Mobile a Rate&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Offriamo un comodo servizio di pagamento a Rate per i Dispositivi Mobile. Clicca il link in basso per vedere i modelli disponibili&lt;/p&gt;'),
+('TIMvision', 'Contenuti e Smart Life', 'img/assistenza/intro_TIMvision.png', 'Info ed Assistenza relativi al servizio TIMvision', '&lt;h3&gt;TIMvision&lt;/h3&gt;&lt;br&gt;&lt;p&gt;TIMvision &egrave; la nuova risposta alle esigenze di intrattenimento per tutta la famiglia. E&rsquo; la TV interamente on demand di TIM che tramite una connessione ADSL Illimitata o Fibra ti permette di godere di migliaia di titoli: il grande cinema, le serie TV pi&ugrave; appassionanti, i cartoni animati pi&ugrave; amati e tanto altro ancora come documentari, reportage e musica.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;I clienti TIMvision possono accedere a:&lt;/p&gt;&lt;ul&gt;	&lt;li&gt;TIMvision TV&lt;/li&gt;	&lt;li&gt;Videostore&lt;/li&gt;	&lt;li&gt;Free&lt;/li&gt;	&lt;li&gt;Replay TV&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;L''abbonamento TIMvision ti permette di guardare tutti i contenuti su&amp;nbsp;PC,&amp;nbsp;Smart&amp;nbsp;TV o&amp;nbsp;TV con&amp;nbsp;Decoder, tablet e smartphone senza consumare Giga, quando e dove vuoi.&lt;/p&gt;', '&lt;h3&gt;Dispositivi per usare TIMvision&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Oltre al Decoder TIMvision, nella sezione Prodotti puoi trovare anche il Televisore che fa per te.&lt;/p&gt;');
 
 -- --------------------------------------------------------
 
@@ -50,11 +50,17 @@ INSERT INTO `assistenza` (`nome`, `categoria`, `image`, `intro`, `descrizione`, 
 --
 
 CREATE TABLE `banner_prodotti` (
-  `id` int(11) NOT NULL,
+  `categoria_prodotti` varchar(80) NOT NULL,
   `banner` varchar(200) NOT NULL,
-  `intro` varchar(200) NOT NULL,
-  `categoria` varchar(80) NOT NULL
+  `intro_banner` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `banner_prodotti`
+--
+
+INSERT INTO `banner_prodotti` (`categoria_prodotti`, `banner`, `intro_banner`) VALUES
+('Smartphone e Telefoni', 'img/prodotti/banner_prodotti.jpg', 'Smartphone, Cellulari e Telefoni per la casa');
 
 -- --------------------------------------------------------
 
@@ -131,7 +137,8 @@ CREATE TABLE `filtro` (
 --
 
 INSERT INTO `filtro` (`categoria_device`, `filtro1`, `filtro2`, `filtro3`, `filtro4`) VALUES
-('Smartphone e Telefoni', 'Smartphone', 'Cellulari', 'iPhones', 'Telefoni di casa');
+('Smartphone e Telefoni', 'Smartphone', 'Cellulari', 'iPhones', 'Telefoni di casa'),
+('TV e Smart Living', 'TV', 'Decoder', '', '');
 
 -- --------------------------------------------------------
 
@@ -210,6 +217,7 @@ CREATE TABLE `gruppo` (
 --
 
 INSERT INTO `gruppo` (`nome`, `banner`, `intro_banner`, `icona1`, `icona2`, `icona3`, `icona4`, `icona5`, `image1`, `image2`, `image3`, `image4`, `image5`, `categoria1`, `intro1`, `categoria2`, `intro2`, `categoria3`, `intro3`, `categoria4`, `intro4`, `categoria5`, `intro5`) VALUES
+('Assistenza', 'img/assistenza/banner_assistenza.jpg', 'Assistenza e supporto tecnico a portata di click', '', '', '', '', '', 'img/assistenza/gestione_linea.jpg', 'img/assistenza/controllo_costi.jpg', 'img/assistenza/supporto_tecnico.jpg', 'img/assistenza/contenuti_smart_life.jpg', '', 'Gestione Linea e Servizi', 'Assistenza per la tua linea fissa e i servizi a tua disposizione', 'Controllo Costi e Pagamenti', 'Controlla i Costi e verifica i Pagamenti che hai effettuato', 'Supporto Tecnico e Configurazioni', 'Hai bisogno di Supporto Tecnico? Ti serve una mano nella configurazione di un nostro dispositivo? Questa sezione fa al caso tuo', 'Contenuti e Smart Life', 'Ti serve Assistenza o hai bisogno di maggiori informazioni sui nostri Contenuti e sui nostri Servizi Smart Life? Questa sezione fa al caso tuo', 'In Evidenza', 'Non hai trovato quello che cerchi? Vai alla sezione In Evidenza'),
 ('Prodotti', 'img/prodotti/banner_prodotti.jpg', 'Smartphone, Tablet, Telefoni per la casa anche a rate sul conto TIM', 'img/prodotti/1_Smartphone.png', 'img/prodotti/2_Tablet.png', 'img/prodotti/3_Modem.png', 'img/prodotti/4_TV.png', 'img/prodotti/5_Outlet.png', 'img/prodotti/smartphone_telefoni.jpg', 'img/prodotti/tablet_computer.jpeg', 'img/prodotti/modem_networking.jpg', 'img/prodotti/tv_smart_living.jpg', 'img/prodotti/outlet.png', 'Smartphone e Telefoni', 'Telefoni fissi sia tradizionali che cordless e Cellulari e Smartphone', 'Tablet e Computer', 'Tablet, Computer ed Accessori', 'Modem e Networking', 'Tutto quello che ti serve per navigare in Internet', 'TV e Smart Living', 'Scopri le nostre offerte TV e tutti i servizi Smart Living che ti semplificheranno la vita', 'Outlet', 'Ottimi prodotti ad ottimi prezzi'),
 ('Smart Life', 'img/smart_life/banner_smartLife.jpg', 'Scopri Serie TV, Wereables, Servizi e Dispositivi intelligenti che semplificheranno la tua vita', '', '', '', '', '', 'img/smart_life/tv.jpg', 'img/smart_life/salute_benessere.jpg', 'img/smart_life/casa_famiglia.jpg', 'img/smart_life/servizi_persona.jpg', '', 'TV', 'I migliori Film, le migliori Serie TV e la Serie A di Calcio', 'Salute e Benessere', 'Prova gli ultimi Wereables. Scopri come salute e benessere possano cambiare in meglio la tua vita. Libera la tua voglia di movimento. Condividi con gli amici i tuoi risultati', 'Casa e Famiglia', 'Smart Life vuol dire anche avere una maggiormente semplice e sicura. Anche per la tua casa e per i tuoi cari', 'Servizi alla Persona', 'Un nuovo approccio al mondo del e-payment e della identit digitale. Potrai gestire con semplicit e in tutta sicurezza i tuoi pagamenti digitali, il tuo archivio personale, custodire la tua password', '', '');
 
@@ -264,7 +272,7 @@ ALTER TABLE `assistenza`
 -- Indexes for table `banner_prodotti`
 --
 ALTER TABLE `banner_prodotti`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`categoria_prodotti`);
 
 --
 -- Indexes for table `device`
@@ -318,11 +326,6 @@ ALTER TABLE `smart_life`
 -- AUTO_INCREMENT for dumped tables
 --
 
---
--- AUTO_INCREMENT for table `banner_prodotti`
---
-ALTER TABLE `banner_prodotti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `device`
 --
