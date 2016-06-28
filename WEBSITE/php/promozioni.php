@@ -10,7 +10,7 @@
 			}
 			
 			//prendo i dati dalla tabella device (i device che hanno un valore per vecchio_prezzo diverso da NULL sono i prodotti in promozione)
-			$query="select marca, nome, image, prezzo, rate, vecchio_prezzo from device where vecchio_prezzo is not NULL";
+			$query="SELECT marca, nome, image, prezzo, rate, vecchio_prezzo FROM device WHERE vecchio_prezzo IS NOT NULL";
 			$result=$conn->query($query);
 			
 			if($result->num_rows > 0){

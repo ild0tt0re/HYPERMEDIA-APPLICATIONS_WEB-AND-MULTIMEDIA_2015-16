@@ -56,10 +56,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">HOME <span class="sr-only">(current)</span></a></li>
-                    <li class="active"><a href="multiple-group-of-topic.html">PRODOTTI</a></li>
-                    <li><a href="#">ASSISTENZA</a></li>
-                    <li><a href="#">SMART LIFE</a></li>
-                    <li><a href="#">PROMOZIONI</a></li>
+                    <li class="active"><a href="got.html?gruppo=Prodotti">PRODOTTI</a></li>
+                    <li><a href="got.html?gruppo=Assistenza">ASSISTENZA</a></li>
+                    <li><a href="got.html?gruppo=Smart Life">SMART LIFE</a></li>
+                    <li><a href="promotions.html">PROMOZIONI</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
@@ -69,8 +69,9 @@
 <!--Breadcrumb-->
 <div class="container">
     <ol class="breadcrumb">
-        <li><a href="multiple-group-of-topic.html">Category</a></li>
-        <li><a href="#">Sub-category</a></li>
+        <li><a href="got.html?gruppo=Prodotti">Prodotti</a></li>
+        <li><a href="#">Category</a></li>
+        <li><a href="#">Device</a></li>
     </ol>
 </div>
 
@@ -149,21 +150,15 @@
 
             <div class="row topic-bind">
                 <div class="col-md-6">
-                    <h4>Servizi Associati</h4>
-                    <ul>
-                        <li>Servizio SmartLife -> TIM Tag</li>
-                        <li>Servizio SmartLife -> SL2</li>
-                        <li>Servizio SmartLife -> SL3</li>
-                        <li>Servizio SmartLife -> SL4</li>
+                    <h4>Servizi Smart Life Associati</h4>
+                    <ul id="smart-list">
+                        
                     </ul>
                 </div>
                 <div class="col-md-offset-2 col-md-4">
-                    <h4>Servizi Associati</h4>
-                    <ul>
-                        <li>Servizio SmartLife -> TIM Tag</li>
-                        <li>Servizio SmartLife -> SL2</li>
-                        <li>Servizio SmartLife -> SL3</li>
-                        <li>Servizio SmartLife -> SL4</li>
+                    <h4>Servizi di Assistenza Associati</h4>
+                    <ul id="assistenza-list">
+                        
                     </ul>
                 </div>
 
@@ -186,6 +181,8 @@
 
 <script src="js/getVariables.js" type="text/javascript"></script>
 <script src="js/script_device.js" type="text/javascript"></script>
+<script src="js/device_lista_assistenze.js" type="text/javascript"></script>
+<script src="js/device_lista_smartlife.js" type="text/javascript"></script>
 
 </body>
 </html>

@@ -56,10 +56,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">HOME <span class="sr-only">(current)</span></a></li>
-                    <li class="active"><a href="multiple-group-of-topic.html">PRODOTTI</a></li>
-                    <li><a href="#">ASSISTENZA</a></li>
-                    <li><a href="#">SMART LIFE</a></li>
-                    <li><a href="#">PROMOZIONI</a></li>
+                    <li class="active"><a href="got.html?gruppo=Prodotti">PRODOTTI</a></li>
+                    <li><a href="got.html?gruppo=Assistenza">ASSISTENZA</a></li>
+                    <li><a href="got.html?gruppo=Smart Life">SMART LIFE</a></li>
+                    <li><a href="promotions.html">PROMOZIONI</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
@@ -69,8 +69,9 @@
 <!--Breadcrumb-->
 <div class="container">
     <ol class="breadcrumb">
-        <li><a href="multiple-group-of-topic.html">Category</a></li>
-        <li><a href="#">Sub-category</a></li>
+        <li><a href="got.html?gruppo=Assistenza">Assistenza</a></li>
+        <li><a href="#">Category</a></li>
+        <li><a href="#">Topic</a></li>
     </ol>
 </div>
 
@@ -78,7 +79,7 @@
 <main class="topic-assistance">
     <div class="container">
         <div class="row">
-            <h2 class="text-center">Assistenza Mobile</h2>
+            <h2 id="titolo" class="text-center">Assistenza Mobile</h2>
         </div>
 
         <div class="row topic-description">
@@ -96,6 +97,9 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="home">
+                        
+                        <div id="descrizione-assistenza"></div>
+<!--
                         <h3>La tua SIM</h3>
                         <p>Tutto ció che devi sapere per gestire al meglio la tua SIM</p>
                         <ul>
@@ -110,10 +114,16 @@
                             <li>.......</li>
                         </ul>
                         <p>Cosa fare in caso di furto e smarrimento</p>
+-->
                         <hr>
+                        <div id="dispositivi-associati"></div>
+                        <a id="link-for-devices">Dispositivi Associati</a>
+                        
+<!--
                         <h3>Dispositivi Mobile a rate</h3>
                         <p>Offriamo un comodo servizio di acquisto dispositivi a rate ...</p>
                         <a href="#">Scopri tutti i Dispositivi Mobile acquistabili a rate</a>
+-->
                     </div>
                     <div role="tabpanel" class="tab-pane" id="profile">
                         <!-- collapse-panel -->
@@ -206,7 +216,7 @@
 <script src="js/main.js"></script>
 
 <script src="js/getVariables.js" type="text/javascript"></script>
-<script src="js/script_device.js" type="text/javascript"></script>
+<script src="js/script_assistenza.js" type="text/javascript"></script>
 
 </body>
 </html>

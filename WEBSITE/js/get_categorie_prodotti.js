@@ -4,6 +4,7 @@ $("document").ready(function() {
     var immagini_categorie= new Array(5);
     var intro_categorie = new Array(5);
     //var icone_categorie = new Array(5);
+    var pagina;
     
     $.ajax({
         method: "POST",
@@ -11,7 +12,7 @@ $("document").ready(function() {
         crossDomain: true,
         url: "php/gruppo.php",
         data: {
-            gruppo: variabile_get(),
+            gruppo: getVariableFromPosition(0),//prima variabile del get => nome del gruppo
         },
         success: function(response) {
             var nome_gruppo = "";
@@ -26,11 +27,29 @@ $("document").ready(function() {
                 immagini_categorie[i]=response["image"+(i+1)];
                 intro_categorie[i]=response["intro"+(i+1)];
             }
+            
+            if(nome_gruppo=="Prodotti"){
+                pagina="mgot.html";
+            }
+            else{
+                pagina="mgot-no-filter.html";
+            }
+            
             for(i=0;i<categorie.length;i++){
-                $("#image"+(i+1)).attr("src",immagini_categorie[i]);
-                $(".link"+(i+1)).attr("href","mgot.html?gruppo="+nome_gruppo+"&categoria="+categorie[i]);
-                $(".categoria"+(i+1)).html(""+categorie[i]);
-                $("#intro"+(i+1)).html(""+intro_categorie[i]);
+                if (immagini_categorie[i]!=""){
+                    $("#image"+(i+1)).attr("src",immagini_categorie[i]);
+                    $(".link"+(i+1)).attr("href",""+pagina+"?gruppo="+nome_gruppo+"&categoria="+categorie[i]);
+                    $(".categoria"+(i+1)).html(""+categorie[i]);
+                    $("#intro"+(i+1)).html(""+intro_categorie[i]);
+                }
+                else{
+                    $(".col-md-6").eq(i).hide();//nascondo un elemento della classe .col-md-6 (sezione con immagine, categoria e introduzione)
+                    //Nel gruppo assistenza nel DB per la categoria IN EVIDENZA è presente solo il campo intro corrispondente
+                    //che va posizionato in un apposito <a id="in-evidenza"> </a>
+                    if (intro_categorie[i]!=""){
+                        $("#in-evidenza").html(""+intro_categorie[i]);
+                    }
+                }
             }
             
         },
@@ -40,15 +59,3 @@ $("document").ready(function() {
     });
     return false;
 });
-
-function variabile_get() {
-    var array_variabili=getVariables();
-    var variabile_del_get = array_variabili[0].split("=",2);
-    return variabile_del_get[1];
-//    var url = window.location.href;
-//    var question_mark = url.split("?",2);
-//    var and_simbol= question_mark[1].split("&");
-//    var variable=and_simbol[0].split("=",2);
-//    console.log("Variable: "+variable[0]+" Value: "+variable[1]);
-//    return variable[1];
-}

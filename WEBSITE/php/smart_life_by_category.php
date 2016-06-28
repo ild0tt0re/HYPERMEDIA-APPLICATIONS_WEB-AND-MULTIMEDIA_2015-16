@@ -1,7 +1,7 @@
 <?php
         if($_SERVER["REQUEST_METHOD"]=="POST"){
-            $id_device=isset($_POST["id_device"])?$_POST["id_device"]:-1;
-			if( !is_numeric($id_device) || $id_device==-1){
+            $categoria=isset($_POST["categoria"])?$_POST["categoria"]:null;
+			if($categoria == null){
 				die();
 			}
 			
@@ -10,13 +10,15 @@
 			$conn=new mysqli("localhost","root","","mytim");
 			//controllo avvenuta connessione
 			if(mysqli_connect_errno()){
-				$errore = array("nome_assistenza"=>"Errore DataBase");
+				$errore = array("nome"=>"Problema DataBase", "image"=>" ","intro"=>" ",);
 				die ( json_encode($errore) );
 			}
 			
-			//prendo i dati dalla tabella for_device_2as
-			//$query="select nome_assistenza from for_device_2as where id_device='$id_device'";
-			$query="SELECT assistenza.nome, assistenza.categoria FROM assistenza JOIN for_device_2as ON assistenza.nome=for_device_2as.nome_assistenza WHERE for_device_2as.id_device='$id_device'";
+			//sistemo la stringa $categoria per inserirla nella query
+			$categoria = $conn->real_escape_string( htmlentities($categoria) );
+			
+			//prendo i dati dalla tabella smart_life
+			$query="select nome, image, intro from smart_life where categoria='$categoria'";
 			$result=$conn->query($query);
 			
 			if($result->num_rows > 0){
@@ -28,7 +30,7 @@
 				echo json_encode($array_righe);//esporta in json
 			}
 			else{
-				$not_found = array("nome_assistenza"=>" ");
+				$not_found = array("nome"=>"Not found","image"=>" ","intro"=>" ");
 				echo json_encode($not_found);
 			}
 

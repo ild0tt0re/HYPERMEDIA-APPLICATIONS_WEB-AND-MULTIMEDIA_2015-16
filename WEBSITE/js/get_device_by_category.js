@@ -10,13 +10,13 @@ $("document").ready(function() {
         crossDomain: true,
         url: "php/device_by_category.php",
         data: {
-            categoria: variabile_categoria(),
+            categoria: getVariableFromPosition(1),//seconda variabile del GET => categoria
         },
         success: function(response) {
-            var query_string="?gruppo="+variabile_gruppo()+"&categoria="+variabile_categoria()+"&id=";
-            $(".breadcrumb li:eq(0) a").html(variabile_gruppo());
+            var query_string="?gruppo="+getVariableFromPosition(0)+"&categoria="+getVariableFromPosition(1)+"&id=";
+            $(".breadcrumb li:eq(0) a").html(getVariableFromPosition(0));
             var nome_categoria = "";
-            nome_categoria+=variabile_categoria();
+            nome_categoria+=getVariableFromPosition(1);
             $(".breadcrumb li:eq(1) a").html(nome_categoria);
             $("#titolo").html(nome_categoria.toUpperCase());
             //$("#intro_banner").html(""+response['intro_banner']);
@@ -31,6 +31,11 @@ $("document").ready(function() {
                 contatore++;
                 
             }
+            contatore--;
+            
+            for(var k=contatore ; k<9;k++){
+                $(".col-md-4.card").eq(k).hide();
+            }
             
         },
         error: function(request, error) {
@@ -40,18 +45,6 @@ $("document").ready(function() {
     
     return false;
 });
-
-function variabile_gruppo(){
-    var array_variabili=getVariables();
-    var variabile_del_get = array_variabili[0].split("=",2);
-    return variabile_del_get[1];
-}
-
-function variabile_categoria() {
-    var array_variabili=getVariables();
-    var variabile_del_get = array_variabili[1].split("=",2);
-    return variabile_del_get[1];
-}
 
 function creaPrezzo(vecchio_prezzo, prezzo, rate){
     var stringa_prezzo="";

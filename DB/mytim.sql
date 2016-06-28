@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2016 at 02:46 PM
+-- Generation Time: Jun 25, 2016 at 11:52 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -17,13 +17,9 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `my_hyp2016abate7annunziata`
+-- Database: `mytim`
 --
-/*
-CREATE DATABASE my_hyp2016abate7annunziata;
 
-USE my_hyp2016abate7annunziata;
-*/
 -- --------------------------------------------------------
 
 --
@@ -34,6 +30,7 @@ CREATE TABLE `assistenza` (
   `nome` varchar(80) NOT NULL,
   `categoria` varchar(50) NOT NULL,
   `image` varchar(200) NOT NULL,
+  `intro` varchar(300) NOT NULL,
   `descrizione` varchar(3000) NOT NULL,
   `intro_device` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -42,9 +39,9 @@ CREATE TABLE `assistenza` (
 -- Dumping data for table `assistenza`
 --
 
-INSERT INTO `assistenza` (`nome`, `categoria`, `image`, `descrizione`, `intro_device`) VALUES
-('Mobile', 'Gestione Linea e Servizi', '', '&lt;h3&gt;La tua SIM&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Tutto ci&ograve; che devi sapere per gestire al meglio la tua SIM:&lt;/p&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;I codici PIN e PUK: il PIN (Personal Identity Number) &egrave; un codice numerico di 4 cifre che ti consente, se regolarmente impostato, di proteggere il telefonino da utilizzi illeciti. Viene infatti richiesto dal telefonino al momento dell&rsquo;accensione; il codice PIN &egrave; personalizzabile. Il PUK (Personal Unblocking Key) &egrave; un codice di sblocco fisso e non modificabile che serve per sbloccare la SIM a seguito dell''errata digitazione del codice PIN per 3 volte di seguito.&lt;/li&gt;&lt;li&gt;Cosa fare in caso di furto o smarrimento: dovrai tempestivamente bloccare la linea relativa alla SIM presente al suo interno.\r\nSe sei un cliente ricaricabile e sei gi&agrave; registrato alla sezione MyTIM Mobile puoi bloccare la linea direttamente online. Se non sei registrato alla sezione MyTIM Mobile o se sei un cliente in abbonamento dovrai contattare il Servizio Clienti 119. Previa identificazione e verifica della titolarit&agrave; del numero (attraverso la comunicazione di nome, cognome, codice fiscale,...) verr&agrave; immediatamente bloccata la linea al traffico telefonico.&lt;/li&gt;&lt;li&gt;Sostituzione della tua SIM: l&rsquo;operazione di sostituzione SIM ti consente di cambiare la tua SIM e conservare il tuo numero telefonico (sia per clienti ricaricabili che in abbonamento).&lt;/li&gt;&lt;/ul&gt;', '&lt;h3&gt;Dispositivi Mobile a Rate&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Offriamo un comodo servizio di pagamento a Rate per i Dispositivi Mobile. Clicca il link in basso per vedere i modelli disponibili&lt;/p&gt;'),
-('TIMvision', 'Contenuti e Smart Life', '', '&lt;h3&gt;TIMvision&lt;/h3&gt;&lt;br&gt;&lt;p&gt;TIMvision &egrave; la nuova risposta alle esigenze di intrattenimento per tutta la famiglia. E&rsquo; la TV interamente on demand di TIM che tramite una connessione ADSL Illimitata o Fibra ti permette di godere di migliaia di titoli: il grande cinema, le serie TV pi&ugrave; appassionanti, i cartoni animati pi&ugrave; amati e tanto altro ancora come documentari, reportage e musica.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;I clienti TIMvision possono accedere a:&lt;/p&gt;&lt;ul&gt;	&lt;li&gt;TIMvision TV&lt;/li&gt;	&lt;li&gt;Videostore&lt;/li&gt;	&lt;li&gt;Free&lt;/li&gt;	&lt;li&gt;Replay TV&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;L''abbonamento TIMvision ti permette di guardare tutti i contenuti su&amp;nbsp;PC,&amp;nbsp;Smart&amp;nbsp;TV o&amp;nbsp;TV con&amp;nbsp;Decoder, tablet e smartphone senza consumare Giga, quando e dove vuoi.&lt;/p&gt;', '&lt;h3&gt;Dispositivi per usare TIMvision&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Oltre al Decoder TIMvision, nella sezione Prodotti puoi trovare anche il Televisore che fa per te.&lt;/p&gt;');
+INSERT INTO `assistenza` (`nome`, `categoria`, `image`, `intro`, `descrizione`, `intro_device`) VALUES
+('Mobile', 'Gestione Linea e Servizi', '', '', '&lt;h3&gt;La tua SIM&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Tutto ci&ograve; che devi sapere per gestire al meglio la tua SIM:&lt;/p&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;I codici PIN e PUK: il PIN (Personal Identity Number) &egrave; un codice numerico di 4 cifre che ti consente, se regolarmente impostato, di proteggere il telefonino da utilizzi illeciti. Viene infatti richiesto dal telefonino al momento dell&rsquo;accensione; il codice PIN &egrave; personalizzabile. Il PUK (Personal Unblocking Key) &egrave; un codice di sblocco fisso e non modificabile che serve per sbloccare la SIM a seguito dell''errata digitazione del codice PIN per 3 volte di seguito.&lt;/li&gt;&lt;li&gt;Cosa fare in caso di furto o smarrimento: dovrai tempestivamente bloccare la linea relativa alla SIM presente al suo interno.\r\nSe sei un cliente ricaricabile e sei gi&agrave; registrato alla sezione MyTIM Mobile puoi bloccare la linea direttamente online. Se non sei registrato alla sezione MyTIM Mobile o se sei un cliente in abbonamento dovrai contattare il Servizio Clienti 119. Previa identificazione e verifica della titolarit&agrave; del numero (attraverso la comunicazione di nome, cognome, codice fiscale,...) verr&agrave; immediatamente bloccata la linea al traffico telefonico.&lt;/li&gt;&lt;li&gt;Sostituzione della tua SIM: l&rsquo;operazione di sostituzione SIM ti consente di cambiare la tua SIM e conservare il tuo numero telefonico (sia per clienti ricaricabili che in abbonamento).&lt;/li&gt;&lt;/ul&gt;', '&lt;h3&gt;Dispositivi Mobile a Rate&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Offriamo un comodo servizio di pagamento a Rate per i Dispositivi Mobile. Clicca il link in basso per vedere i modelli disponibili&lt;/p&gt;'),
+('TIMvision', 'Contenuti e Smart Life', '', '', '&lt;h3&gt;TIMvision&lt;/h3&gt;&lt;br&gt;&lt;p&gt;TIMvision &egrave; la nuova risposta alle esigenze di intrattenimento per tutta la famiglia. E&rsquo; la TV interamente on demand di TIM che tramite una connessione ADSL Illimitata o Fibra ti permette di godere di migliaia di titoli: il grande cinema, le serie TV pi&ugrave; appassionanti, i cartoni animati pi&ugrave; amati e tanto altro ancora come documentari, reportage e musica.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;I clienti TIMvision possono accedere a:&lt;/p&gt;&lt;ul&gt;	&lt;li&gt;TIMvision TV&lt;/li&gt;	&lt;li&gt;Videostore&lt;/li&gt;	&lt;li&gt;Free&lt;/li&gt;	&lt;li&gt;Replay TV&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;L''abbonamento TIMvision ti permette di guardare tutti i contenuti su&amp;nbsp;PC,&amp;nbsp;Smart&amp;nbsp;TV o&amp;nbsp;TV con&amp;nbsp;Decoder, tablet e smartphone senza consumare Giga, quando e dove vuoi.&lt;/p&gt;', '&lt;h3&gt;Dispositivi per usare TIMvision&lt;/h3&gt;&lt;br&gt;&lt;p&gt;Oltre al Decoder TIMvision, nella sezione Prodotti puoi trovare anche il Televisore che fa per te.&lt;/p&gt;');
 
 -- --------------------------------------------------------
 
@@ -122,14 +119,19 @@ INSERT INTO `faq` (`id_faq`, `nome_assistenza`, `domanda`, `risposta`) VALUES
 --
 
 CREATE TABLE `filtro` (
-  `id` int(11) NOT NULL,
   `categoria_device` varchar(50) NOT NULL,
   `filtro1` varchar(50) NOT NULL,
   `filtro2` varchar(50) NOT NULL,
   `filtro3` varchar(50) NOT NULL,
-  `filtro4` varchar(50) NOT NULL,
-  `filtro5` varchar(50) NOT NULL
+  `filtro4` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `filtro`
+--
+
+INSERT INTO `filtro` (`categoria_device`, `filtro1`, `filtro2`, `filtro3`, `filtro4`) VALUES
+('Smartphone e Telefoni', 'Smartphone', 'Cellulari', 'iPhones', 'Telefoni di casa');
 
 -- --------------------------------------------------------
 
@@ -143,6 +145,13 @@ CREATE TABLE `for_device1sl` (
   `id_device` int(11) NOT NULL,
   `intro` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `for_device1sl`
+--
+
+INSERT INTO `for_device1sl` (`id_for_dev1sl`, `nome_smart_life`, `id_device`, `intro`) VALUES
+(1, 'TIMvision', 1, 'Il Decoder TIMvision ti consente di entrare nel magico mondo di TIMvision');
 
 -- --------------------------------------------------------
 
@@ -185,15 +194,15 @@ CREATE TABLE `gruppo` (
   `image4` varchar(200) NOT NULL,
   `image5` varchar(200) NOT NULL,
   `categoria1` varchar(50) NOT NULL,
-  `intro1` varchar(200) NOT NULL,
+  `intro1` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `categoria2` varchar(50) NOT NULL,
-  `intro2` varchar(200) NOT NULL,
+  `intro2` varchar(300) NOT NULL,
   `categoria3` varchar(50) NOT NULL,
-  `intro3` varchar(200) NOT NULL,
+  `intro3` varchar(300) NOT NULL,
   `categoria4` varchar(50) NOT NULL,
-  `intro4` varchar(200) NOT NULL,
+  `intro4` varchar(300) NOT NULL,
   `categoria5` varchar(50) NOT NULL,
-  `intro5` varchar(200) NOT NULL
+  `intro5` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -201,7 +210,8 @@ CREATE TABLE `gruppo` (
 --
 
 INSERT INTO `gruppo` (`nome`, `banner`, `intro_banner`, `icona1`, `icona2`, `icona3`, `icona4`, `icona5`, `image1`, `image2`, `image3`, `image4`, `image5`, `categoria1`, `intro1`, `categoria2`, `intro2`, `categoria3`, `intro3`, `categoria4`, `intro4`, `categoria5`, `intro5`) VALUES
-('Prodotti', 'img/prodotti/banner_prodotti.jpg', 'Smartphone, Tablet, Telefoni per la casa anche a rate sul conto TIM', 'img/prodotti/1_Smartphone.png', 'img/prodotti/2_Tablet.png', 'img/prodotti/3_Modem.png', 'img/prodotti/4_TV.png', 'img/prodotti/5_Outlet.png', 'img/prodotti/smartphone_telefoni.jpg', 'img/prodotti/tablet_computer.jpeg', 'img/prodotti/modem_networking.jpg', 'img/prodotti/tv_smart_living.jpg', 'img/prodotti/outlet.png', 'Smartphone e Telefoni', 'Telefoni fissi sia tradizionali che cordless e Cellulari e Smartphone', 'Tablet e Computer', 'Tablet, Computer ed Accessori', 'Modem e Networking', 'Tutto quello che ti serve per navigare in Internet', 'TV e Smart Living', 'Scopri le nostre offerte TV e tutti i servizi Smart Living che ti semplificheranno la vita', 'Outlet', 'Ottimi prodotti ad ottimi prezzi');
+('Prodotti', 'img/prodotti/banner_prodotti.jpg', 'Smartphone, Tablet, Telefoni per la casa anche a rate sul conto TIM', 'img/prodotti/1_Smartphone.png', 'img/prodotti/2_Tablet.png', 'img/prodotti/3_Modem.png', 'img/prodotti/4_TV.png', 'img/prodotti/5_Outlet.png', 'img/prodotti/smartphone_telefoni.jpg', 'img/prodotti/tablet_computer.jpeg', 'img/prodotti/modem_networking.jpg', 'img/prodotti/tv_smart_living.jpg', 'img/prodotti/outlet.png', 'Smartphone e Telefoni', 'Telefoni fissi sia tradizionali che cordless e Cellulari e Smartphone', 'Tablet e Computer', 'Tablet, Computer ed Accessori', 'Modem e Networking', 'Tutto quello che ti serve per navigare in Internet', 'TV e Smart Living', 'Scopri le nostre offerte TV e tutti i servizi Smart Living che ti semplificheranno la vita', 'Outlet', 'Ottimi prodotti ad ottimi prezzi'),
+('Smart Life', 'img/smart_life/banner_smartLife.jpg', 'Scopri Serie TV, Wereables, Servizi e Dispositivi intelligenti che semplificheranno la tua vita', '', '', '', '', '', 'img/smart_life/tv.jpg', 'img/smart_life/salute_benessere.jpg', 'img/smart_life/casa_famiglia.jpg', 'img/smart_life/servizi_persona.jpg', '', 'TV', 'I migliori Film, le migliori Serie TV e la Serie A di Calcio', 'Salute e Benessere', 'Prova gli ultimi Wereables. Scopri come salute e benessere possano cambiare in meglio la tua vita. Libera la tua voglia di movimento. Condividi con gli amici i tuoi risultati', 'Casa e Famiglia', 'Smart Life vuol dire anche avere una maggiormente semplice e sicura. Anche per la tua casa e per i tuoi cari', 'Servizi alla Persona', 'Un nuovo approccio al mondo del e-payment e della identit digitale. Potrai gestire con semplicit e in tutta sicurezza i tuoi pagamenti digitali, il tuo archivio personale, custodire la tua password', '', '');
 
 -- --------------------------------------------------------
 
@@ -224,6 +234,7 @@ CREATE TABLE `smart_life` (
   `nome` varchar(80) NOT NULL,
   `categoria` varchar(50) NOT NULL,
   `image` varchar(200) NOT NULL,
+  `intro` varchar(300) NOT NULL,
   `descrizione` varchar(2000) NOT NULL,
   `contenuti` varchar(2000) NOT NULL,
   `regole` varchar(3000) NOT NULL,
@@ -235,9 +246,9 @@ CREATE TABLE `smart_life` (
 -- Dumping data for table `smart_life`
 --
 
-INSERT INTO `smart_life` (`nome`, `categoria`, `image`, `descrizione`, `contenuti`, `regole`, `image_descrizione`, `image_contenuti`) VALUES
-('TIMTag', 'Casa e Famiglia', '', '&lt;h3&gt;TIMTag&lt;/h3&gt;&lt;br&gt;&lt;p id=&quot;descrizione&quot;&gt;TIMTag &egrave; il dispositivo che ti informa sulla posizione del tuo amico a quattro zampe e delle cose a te pi&ugrave; care.&lt;br&gt;\r\nSegui in tempo reale i suoi spostamenti sul tuo smartphone senza perderlo mai di vista.&lt;br&gt;\r\nCon TIMTag hai un dispositivo di localizzazione GPS di ultima generazione, con 12 mesi di servizio TIMTag e una TIM Card inclusi e un'' App dedicata intuitiva e semplice da utilizzare!&lt;br&gt;Acquista il servizio TIMTag a 5&euro;/mese&lt;/p&gt;', '&lt;p id=&quot;contenuti&quot;&gt;Se lo ami mettigli un TAG.&lt;br&gt;GESTISCI TUTTO TRAMITE UN''UNICA APP&lt;/p&gt;', '&lt;p id=&quot;regole&quot;&gt;Per usare TIMTag devi seguire 3 semplici passi:&lt;br&gt;&lt;ol&gt;&lt;li&gt;', 'images/smart_life/TIMTag.png', 'images/smart_life/cane.jpg'),
-('TIMvision', 'TV', '', '&lt;h3&gt;TIMvision&lt;/h3&gt;&lt;br&gt;&lt;p id=&quot;descrizione&quot;&gt;Cartoni, Cinema Serie TV, Documentari e Concerti sempre on demand per creare il tuo palinsesto senza pubblicit&agrave;. Pi&ugrave; di 8.000 titoli in un abbonamento, senza vincoli di durata, anche in HD&lt;/p&gt;&lt;br&gt;&lt;p&gt;Acquista un Prodotto TIMvision e abbonati per 5&euro;/mese&lt;/p&gt;', '&lt;p id=&quot;contenuti&quot;&gt;Accomodati e goditi il grande cinema.&lt;br&gt;Una ricca proposta di film con le anteprime pi&ugrave; attese, i grandi classici, inediti, film d''azione, thriller, animazione e commedie per tutta la famiglia. In pi&ugrave; l''HD, per rendere ogni immagine spettacolare e non perdere neanche un particolare&lt;/p&gt;', '&lt;p id=&quot;regole&quot;&gt;Abbonati a TIMvision per goderti un grande spettacolo. Puoi vedere oltre 8.000 titoli tra cartoni, cinema, serie TV, documentari e gli ultimi 7 giorni di LA7 e LA7d. Se ti abboni entro il 30/08/2016, il primo mese &egrave; gratis e poi ti basteranno solo 5&euro;/mese.&lt;br&gt;&lt;span&gt;Per usufruire di TIMvision devi essere gi&agrave; un nostro cliente con ADSL Telecom.&lt;/span&gt;&lt;/p&gt;', 'images/smart_life/TIMvision.png', 'images/smart_life/cinema.jpg');
+INSERT INTO `smart_life` (`nome`, `categoria`, `image`, `intro`, `descrizione`, `contenuti`, `regole`, `image_descrizione`, `image_contenuti`) VALUES
+('TIMTag', 'Casa e Famiglia', 'img/smart_life/intro_TIM_Tag.jpg', 'Traccia e rintraccia il tuo amico a 4 zampe e tutte le cose che ami', '&lt;h3&gt;TIMTag&lt;/h3&gt;&lt;br&gt;&lt;p id=&quot;descrizione&quot;&gt;TIMTag &egrave; il dispositivo che ti informa sulla posizione del tuo amico a quattro zampe e delle cose a te pi&ugrave; care.&lt;br&gt;\r\nSegui in tempo reale i suoi spostamenti sul tuo smartphone senza perderlo mai di vista.&lt;br&gt;\r\nCon TIMTag hai un dispositivo di localizzazione GPS di ultima generazione, con 12 mesi di servizio TIMTag e una TIM Card inclusi e un'' App dedicata intuitiva e semplice da utilizzare!&lt;br&gt;Acquista il servizio TIMTag a 5&euro;/mese&lt;/p&gt;', '&lt;p id=&quot;contenuti&quot;&gt;Se lo ami mettigli un TAG.&lt;br&gt;GESTISCI TUTTO TRAMITE UN''UNICA APP&lt;/p&gt;', '&lt;p id=&quot;regole&quot;&gt;Per usare TIMTag devi seguire 3 semplici passi:&lt;br&gt;&lt;ol&gt;&lt;li&gt;', 'images/smart_life/TIMTag.png', 'images/smart_life/cane.jpg'),
+('TIMvision', 'TV', 'img/smart_life/intro_TIMvision.png', 'Cartoni, Cinema, Serie TV, Documentari e Concerti sempre on demand per creare il tuo palinsesto senza spot pubblicitari. Oltre 8000 titoli in un solo abbonamento, senza vincoli di durata, anche in HD', '&lt;h3&gt;TIMvision&lt;/h3&gt;&lt;br&gt;&lt;p id=&quot;descrizione&quot;&gt;Cartoni, Cinema Serie TV, Documentari e Concerti sempre on demand per creare il tuo palinsesto senza pubblicit&agrave;. Pi&ugrave; di 8.000 titoli in un abbonamento, senza vincoli di durata, anche in HD&lt;/p&gt;&lt;br&gt;&lt;p&gt;Acquista un Prodotto TIMvision e abbonati per 5&euro;/mese&lt;/p&gt;', '&lt;p id=&quot;contenuti&quot;&gt;Accomodati e goditi il grande cinema.&lt;br&gt;Una ricca proposta di film con le anteprime pi&ugrave; attese, i grandi classici, inediti, film d''azione, thriller, animazione e commedie per tutta la famiglia. In pi&ugrave; l''HD, per rendere ogni immagine spettacolare e non perdere neanche un particolare&lt;/p&gt;', '&lt;p id=&quot;regole&quot;&gt;Abbonati a TIMvision per goderti un grande spettacolo. Puoi vedere oltre 8.000 titoli tra cartoni, cinema, serie TV, documentari e gli ultimi 7 giorni di LA7 e LA7d. Se ti abboni entro il 30/08/2016, il primo mese &egrave; gratis e poi ti basteranno solo 5&euro;/mese.&lt;br&gt;&lt;span&gt;Per usufruire di TIMvision devi essere gi&agrave; un nostro cliente con ADSL Telecom.&lt;/span&gt;&lt;/p&gt;', 'images/smart_life/TIMvision.png', 'images/smart_life/cinema.jpg');
 
 --
 -- Indexes for dumped tables
@@ -271,7 +282,7 @@ ALTER TABLE `faq`
 -- Indexes for table `filtro`
 --
 ALTER TABLE `filtro`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`categoria_device`);
 
 --
 -- Indexes for table `for_device1sl`
@@ -323,15 +334,10 @@ ALTER TABLE `device`
 ALTER TABLE `faq`
   MODIFY `id_faq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT for table `filtro`
---
-ALTER TABLE `filtro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `for_device1sl`
 --
 ALTER TABLE `for_device1sl`
-  MODIFY `id_for_dev1sl` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_for_dev1sl` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `for_device_2as`
 --
