@@ -20,7 +20,6 @@ $("document").ready(function() {
             $("#profile").html(response['specifiche']);            
         },
         error: function(request, error) {
-            $(".risultato").html("SONO IN ERROR");//da togliere
             console.log(request + ":" + error);
         }
     });

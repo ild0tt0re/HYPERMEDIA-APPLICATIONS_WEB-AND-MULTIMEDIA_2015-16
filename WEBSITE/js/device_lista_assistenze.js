@@ -5,11 +5,14 @@ $("document").ready(function() {
         crossDomain: true,
         url: "php/indice_assistenze.php",
         data: {
-            id_device: variabile_id(),
+            id_device: getVariableFromPosition(2),
         },
         success: function(response) {
+            var nome_assistenza="";
             for (var i in response){
-                $("#assistenza-list").append("<li>Servizio di Assistenza -> "+response[i].nome_assistenza+"</li>");
+                nome_assistenza+=response[i].nome;
+                console.log("categoria="+response[i].categoria+"  assistenza="+nome_assistenza);
+                $("#assistenza-list").append("<li>Servizio di Assistenza -> <a href='topic-assistance.html?gruppo=Assistenza&categoria="+response[i].categoria+"&nome="+nome_assistenza+"'>"+nome_assistenza+"</a></li>");
                 //TO DO link verso l'assistenza corretta
             }  
         },
@@ -20,9 +23,3 @@ $("document").ready(function() {
     
     return false;
 });
-
-function variabile_id() {
-    var array_variabili=getVariables();
-    var variabile_del_get = array_variabili[2].split("=",2);
-    return variabile_del_get[1];
-}

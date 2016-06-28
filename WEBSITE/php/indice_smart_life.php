@@ -15,7 +15,8 @@
 			}
 			
 			//prendo i dati dalla tabella for_device1sl
-			$query="select nome_smart_life from for_device1sl where id_device='$id_device'";
+			//$query="select nome_smart_life from for_device1sl where id_device='$id_device'";
+			$query="SELECT smart_life.nome, smart_life.categoria FROM smart_life JOIN for_device1sl ON smart_life.nome=for_device1sl.nome_smart_life WHERE for_device1sl.id_device='$id_device'";
 			$result=$conn->query($query);
 			
 			if($result->num_rows > 0){

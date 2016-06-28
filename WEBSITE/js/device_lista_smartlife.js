@@ -5,11 +5,12 @@ $("document").ready(function() {
         crossDomain: true,
         url: "php/indice_smart_life.php",
         data: {
-            id_device: variabile_id(),
+            id_device: getVariableFromPosition(2),//terza variabile => ID del device
         },
         success: function(response) {
             for (var i in response){
-                $("#smart-list").append("<li>Servizio Smart Life -> "+response[i].nome_smart_life+"</li>");
+                console.log("categoria="+response[i].categoria+"  nome smart life= "+response[i].nome)
+                $("#smart-list").append("<li>Servizio Smart Life -> "+response[i].nome+"</li>");
                 //TO DO link verso il servizio Smart Life corretto
             }  
         },
@@ -20,9 +21,3 @@ $("document").ready(function() {
     
     return false;
 });
-
-function variabile_id() {
-    var array_variabili=getVariables();
-    var variabile_del_get = array_variabili[2].split("=",2);
-    return variabile_del_get[1];
-}

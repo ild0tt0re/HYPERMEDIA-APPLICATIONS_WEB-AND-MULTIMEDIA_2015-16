@@ -16,8 +16,8 @@
 			//sistemo la stringa $nome_assistenza per inserirla nella query
 			$nome_assistenza = $conn->real_escape_string( htmlentities($nome_assistenza) );
 			
-			//prendo i dati dalla tabella for_device_2as
-			$query="select marca, nome, image, prezzo, vecchio_prezzo, intro from device join for_device_2as on device.id_device=for_device_2as.id_device where nome_assistenza='$nome_assistenza'";
+			//prendo i devices il cui ID è presente nella tabella for_device_2as. Di questi considero solo quelli che hanno il nome_assistenza cercato
+			$query ="SELECT device.* FROM device JOIN for_device_2as ON device.id_device=for_device_2as.id_device WHERE for_device_2as.nome_assistenza='$nome_assistenza'";
 			$result=$conn->query($query);
 			
 			if($result->num_rows > 0){
