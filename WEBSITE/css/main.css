@@ -28,7 +28,7 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
 }
 
 /* Bootstrap arrow */
@@ -38,17 +38,20 @@
     padding-left: 18px;
     padding-right: 18px;
 }
+
 .btn-arrow-right {
     padding-left: 36px;
 }
+
 .btn-arrow-left {
     padding-right: 36px;
 }
+
 .btn-arrow-right:before,
 .btn-arrow-right:after,
 .btn-arrow-left:before,
 .btn-arrow-left:after { /* make two squares (before and after), looking similar to the button */
-    content:"";
+    content: "";
     position: absolute;
     top: 5px; /* move it down because of rounded corners */
     width: 22px; /* same as height */
@@ -61,6 +64,7 @@
     -webkit-border-radius: 0px 4px 0px 0px;
     -moz-border-radius: 0px 4px 0px 0px;
 }
+
 .btn-arrow-right:before,
 .btn-arrow-right:after {
     transform: rotate(45deg); /* rotate right arrow squares 45 deg to point right */
@@ -69,6 +73,7 @@
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
 }
+
 .btn-arrow-left:before,
 .btn-arrow-left:after {
     transform: rotate(225deg); /* rotate left arrow squares 225 deg to point left */
@@ -77,18 +82,22 @@
     -o-transform: rotate(225deg);
     -ms-transform: rotate(225deg);
 }
+
 .btn-arrow-right:before,
 .btn-arrow-left:before { /* align the "before" square to the left */
     left: -11px;
 }
+
 .btn-arrow-right:after,
 .btn-arrow-left:after { /* align the "after" square to the right */
     right: -11px;
 }
+
 .btn-arrow-right:after,
 .btn-arrow-left:before { /* bring arrow pointers to front */
     z-index: 1;
 }
+
 .btn-arrow-right:before,
 .btn-arrow-left:after { /* hide arrow tails background */
     background-color: white;
@@ -371,15 +380,15 @@ footer {
     text-align: center;
 }
 
-.nav-justified>li {
+.nav-justified > li {
     width: 0;
 }
 
-.mgot .col-md-9 section{
+.mgot .col-md-9 section {
     height: 95%;
 }
 
-.got .row-eq-height section{
+.got .row-eq-height section {
     height: 95%;
 }
 
@@ -554,16 +563,15 @@ main.transition-act {
     margin-top: 0;
 }
 
-.transition-act .media-body{
+.transition-act .media-body {
     padding: 0 15px;
 }
 
-.transition-act h2{
+.transition-act h2 {
     background-image: none;
     margin-top: 8px;
     margin-bottom: 10px;
 }
-
 
 /* ---------------------------------
  * TOPIC - ASSISTANCE
@@ -576,3 +584,44 @@ main.transition-act {
 .topic-assistance .topic-description .tab-pane {
     padding: 10px 30px;
 }
+
+.topic-assistance .topic-description .collapsed span {
+    transform: rotate(0deg);
+}
+
+.topic-assistance .topic-description span {
+    transform: rotate(180deg);
+}
+
+/* ---------------------------------
+ * TOPIC - SMART-LIFE
+ * ---------------------------------*/
+
+.topic-sl #image-topic {
+    height: 180px;
+    width: 800px;
+}
+
+.topic-sl section .media {
+    background-image: url("../img/tim-vision-bg.png");
+    background-size: cover;
+    padding: 20px;
+}
+
+.topic-sl .media.media-content {
+    margin-bottom: 50px;
+}
+
+.topic-sl .card section {
+    padding: 0;
+}
+
+.topic-sl .media-left {
+    padding-right: 30px;
+}
+
+.topic-sl .menu-left{
+    border-right: 1px solid gainsboro;
+    margin-right: 14px;
+}
+
