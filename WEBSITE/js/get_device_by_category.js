@@ -62,3 +62,4 @@ function creaPrezzo(vecchio_prezzo, prezzo, rate){
 }
 
 
+$.each

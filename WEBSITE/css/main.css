@@ -392,6 +392,11 @@ footer {
     height: 95%;
 }
 
+.got .media .media-object{
+    max-width: none;
+    width: 150px;
+}
+
 /* ---------------------------------
  * TOPIC - DEVICE
  * ---------------------------------*/
