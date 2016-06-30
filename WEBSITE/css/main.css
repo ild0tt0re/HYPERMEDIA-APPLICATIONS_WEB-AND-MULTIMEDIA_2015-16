@@ -479,12 +479,14 @@ a {
     transition: all 150ms ease;
 }
 
+
+/*TODO: remove
 a:hover {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
-    filter: alpha(opacity=50); /* IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; !* IE 8 *!
+    filter: alpha(opacity=50); !* IE7 *!
     opacity: 0.6;
     text-decoration: none;
-}
+}*/
 
 /* Container */
 .container-fluid {
@@ -634,3 +636,21 @@ main.transition-act {
     margin-right: 14px;
 }
 
+
+/* ---------------------------------
+ * TOPIC - WHO WE ARE
+ * ---------------------------------*/
+
+.who-we-are .menu-left [data-toggle="tab"]:hover{
+    background-color: transparent;
+}
+
+.who-we-are .topic-sl #image-topic {
+    height: 309px;
+    width: 910px;
+    max-width: 329px;
+}
+
+.who-we-are .head-banner-left {
+    padding-left: 260px;
+}
