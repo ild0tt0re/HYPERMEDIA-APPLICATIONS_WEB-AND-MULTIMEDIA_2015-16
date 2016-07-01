@@ -258,9 +258,10 @@ footer {
 .head-banner-left {
     background-color: #005ca8;
     min-height: 200px;
-    padding-left: 167px;
+    padding-right: 100px;
     color: #fff;
     padding-top: 10px;
+    text-align: right;
 }
 
 .head-banner-left p {
@@ -641,16 +642,29 @@ main.transition-act {
  * TOPIC - WHO WE ARE
  * ---------------------------------*/
 
+main.who-we-are{
+    margin-top: 30px;
+}
+
 .who-we-are .menu-left [data-toggle="tab"]:hover{
     background-color: transparent;
 }
 
-.who-we-are .topic-sl #image-topic {
+.who-we-are .topic-sl .media-object {
     height: 309px;
     width: 910px;
     max-width: 329px;
 }
 
-.who-we-are .head-banner-left {
-    padding-left: 260px;
+.who-we-are .tab-pane .thumbnail img {
+    height: 200px;
+    width: 100%;
+}
+
+.who-we-are .tab-pane .caption{
+    text-align: center;
+}
+
+.who-we-are .tab-pane .caption p{
+    font-size: inherit;
 }
