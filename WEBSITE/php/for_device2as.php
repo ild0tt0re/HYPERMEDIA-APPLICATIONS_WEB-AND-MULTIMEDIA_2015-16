@@ -5,8 +5,8 @@
 				die();
 			}
 			//connessione al DataBase
-			//$conn=new mysqli("localhost","prova","ciaocane","prima_prova");
-			$conn=new mysqli("localhost","root","","mytim");
+			$conn=new mysqli("localhost","3110366","","my_hyp2016abate7annunziata");
+			//$conn=new mysqli("localhost","root","","mytim");
 			//controllo avvenuta connessione
 			if(mysqli_connect_errno()){
 				$errore = array("marca"=>"Problema di connessione al db", "nome"=>"Problema di connessione al db","image"=>"Problema di connessione al db","prezzo"=>0,"vecchio_prezzo"=>0,"intro"=>"Problema di connessione al db");
@@ -24,7 +24,7 @@
 				$array_righe = array();
 				
 				while($riga=$result->fetch_array(MYSQL_ASSOC)){
-					//decodifico i campi della tabella che contengono tag html codificati
+					//decodifico i valori presi dalla tabella in quanto si è reso necessario l'uso di Special Entities, questo perché alcuni caratteri speciali (Esempio: apici e doppi apici) generavano errori
 					foreach( $riga as $chiave=>$valore ){
 						$riga[$chiave]=html_entity_decode($valore);
 					}

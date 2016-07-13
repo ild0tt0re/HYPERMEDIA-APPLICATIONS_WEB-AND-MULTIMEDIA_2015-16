@@ -1,21 +1,16 @@
 <?php
         if($_SERVER["REQUEST_METHOD"]=="POST"){
-			$id_device=isset($_POST["id_device"])?$_POST["id_device"]:-1;
-			if( !is_numeric($id_device) || $id_device==-1){
-				die();
-			}
-			
 			//connessione al DataBase
 			$conn=new mysqli("localhost","3110366","","my_hyp2016abate7annunziata");
 			//$conn=new mysqli("localhost","root","","mytim");
 			//controllo avvenuta connessione
 			if(mysqli_connect_errno()){
-				$errore = array("nome_smart_life"=>"Errore DataBase");
+				$errore = array("nome_sl"=>"Problema DataBase", "descrizione_offerta"=>" ", "categoria_sl"=>" ", "image_sl"=>" ");
 				die ( json_encode($errore) );
 			}
 			
-			//prendo i dati dalla tabella for_device1sl
-			$query="SELECT smart_life.nome, smart_life.categoria FROM smart_life JOIN for_device1sl ON smart_life.nome=for_device1sl.nome_smart_life WHERE for_device1sl.id_device='$id_device'";
+			//prendo i dati dal JOIN delle tabelle sl_in_promozione e smart_life
+			$query="SELECT sl_in_promozione.nome_sl AS nome_sl, sl_in_promozione.descrizione_offerta AS descrizione_offerta, smart_life.categoria AS categoria_sl, smart_life.image AS image_sl FROM sl_in_promozione JOIN smart_life ON sl_in_promozione.nome_sl=smart_life.nome";
 			$result=$conn->query($query);
 			
 			if($result->num_rows > 0){
@@ -27,7 +22,7 @@
 				echo json_encode($array_righe);//esporta in json
 			}
 			else{
-				$not_found = array("nome_smart_life"=>" ");
+				$not_found = array("nome_sl"=>" ",  "descrizione_offerta"=>" ", "categoria_sl"=>" ", "image_sl"=>" ");
 				echo json_encode($not_found);
 			}
 

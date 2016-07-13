@@ -1,4 +1,4 @@
-function loadForDevicesAssistenza(){
+function loadForDevicesAssistance(){
     $("document").ready(function() {
         var i;
         var contatore=1;
@@ -34,6 +34,7 @@ function loadForDevicesAssistenza(){
                     $("#nome"+contatore).html(""+response[i].marca+" "+response[i].nome);
                     $("#image"+contatore).attr("src",response[i].image);
                     $("#prezzo"+contatore).html(creaPrezzo(response[i].vecchio_prezzo,response[i].prezzo,response[i].rate));
+                    $("#intro"+contatore).html(""+response[i].intro);
                     contatore++;
 
                 }
@@ -56,13 +57,13 @@ function loadForDevicesAssistenza(){
 
 function creaPrezzo(vecchio_prezzo, prezzo, rate){
     var stringa_prezzo="";
-    if (vecchio_prezzo != null){
+    if (vecchio_prezzo != ""){
         stringa_prezzo+="<span class='scontato'>"+vecchio_prezzo+"€ </span>";
     }
     
     stringa_prezzo+=""+prezzo+"€ ";
     
-    if(rate != null){
+    if(rate != ""){
         stringa_prezzo+=" a rate di "+rate+"€/mese";
     }
     

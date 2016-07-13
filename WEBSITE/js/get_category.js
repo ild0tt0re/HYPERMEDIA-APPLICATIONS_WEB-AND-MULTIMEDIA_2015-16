@@ -26,6 +26,7 @@ $("document").ready(function() {
                 categorie[i]=response["categoria"+(i+1)];
                 immagini_categorie[i]=response["image"+(i+1)];
                 intro_categorie[i]=response["intro"+(i+1)];
+                $("ul.nav-justified li:eq(" +i+ ") span").addClass(""+response['icona'+(i+1)]);
             }
             
             if(nome_gruppo=="Prodotti"){

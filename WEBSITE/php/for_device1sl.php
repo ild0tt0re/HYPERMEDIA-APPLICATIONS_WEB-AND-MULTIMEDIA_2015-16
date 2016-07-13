@@ -6,8 +6,8 @@
 			}
 			
 			//connessione al DataBase
-			//$conn=new mysqli("localhost","prova","ciaocane","prima_prova");
-			$conn=new mysqli("localhost","root","","mytim");
+			$conn=new mysqli("localhost","3110366","","my_hyp2016abate7annunziata");
+			//$conn=new mysqli("localhost","root","","mytim");
 			//controllo avvenuta connessione
 			if(mysqli_connect_errno()){
 				$errore = array("marca"=>"Problema di connessione al db", "nome"=>"Problema di connessione al db","image"=>"Problema di connessione al db","prezzo"=>0,"vecchio_prezzo"=>0,"intro"=>"Problema di connessione al db");
@@ -18,14 +18,15 @@
 			$nome_smart_life = $conn->real_escape_string( htmlentities($nome_smart_life) );
 			
 			//prendo i dati dalla tabella for_device1sl
-			$query="select marca, nome, image, prezzo, vecchio_prezzo, intro from device join for_device1sl on device.id_device=for_device1sl.id_device where nome_smart_life='$nome_smart_life'";
+			//$query="SELECT id_device, marca, nome, image, prezzo, vecchio_prezzo, intro FROM device JOIN for_device1sl ON device.id_device=for_device1sl.id_device WHERE nome_smart_life='$nome_smart_life'";
+			$query="SELECT device.* FROM device JOIN for_device1sl ON device.id_device=for_device1sl.id_device WHERE for_device1sl.nome_smart_life='$nome_smart_life'";
 			$result=$conn->query($query);
 			
 			if($result->num_rows > 0){
 				$array_righe = array();
 				
 				while($riga=$result->fetch_array(MYSQL_ASSOC)){
-					//decodifico i campi della tabella che contengono tag html codificati
+					//decodifico i valori presi dalla tabella in quanto si è reso necessario l'uso di Special Entities, questo perché alcuni caratteri speciali (Esempio: apici e doppi apici) generavano errori
 					foreach( $riga as $chiave=>$valore ){
 						$riga[$chiave]=html_entity_decode($valore);
 					}

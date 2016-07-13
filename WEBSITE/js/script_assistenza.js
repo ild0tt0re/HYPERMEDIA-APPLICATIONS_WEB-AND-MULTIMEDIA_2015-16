@@ -10,15 +10,27 @@ $("document").ready(function() {
         success: function(response) {
             var categoria=""+getVariableFromPosition(1);
             var nome_assistenza=""+getVariableFromPosition(2);
-            var dispositivi_associati="Dispositivi associati"; //da rendere dinamico col DB
             $(".breadcrumb li:eq(1) a").html(categoria);
             $(".breadcrumb li:eq(1) a").attr("href","mgot-no-filter.html?gruppo=Assistenza&categoria="+categoria);
             $(".breadcrumb li:eq(2) a").html(nome_assistenza);
             
-            $("#titolo").html("Assistenza "+response['nome']);
-            $("#descrizione-assistenza").html(response['descrizione']);
-            $("#dispositivi-associati").html(response['intro_device']);
-            $("#link-for-devices").attr("href","transition-act.html?gruppo=Assistenza&categoria="+categoria+"&nome="+nome_assistenza+"&fordevices="+dispositivi_associati);
+            $("#assistance-title").html("Assistenza "+response['nome']);
+           
+            $("#description-title").html(""+response['titolo_descrizione']);
+            $("#description-text").html(""+response['descrizione']);
+            
+            var list_element="";
+            for (var i=1;i<=4;i++){
+                list_element="punto"+i;
+                if (response[list_element] != ""){
+                    $("#description-list").append("<li>"+response[list_element]+"</li>")
+                }
+            }
+            
+            $("#intro-devices-title").html(""+response['titolo_intro_device']);
+            $("#intro-devices").html(""+response['intro_device']);
+            $("#link-for-devices").html(""+response['link_for_devices']);
+            $("#link-for-devices").attr("href","transition-act.html?gruppo=Assistenza&categoria="+categoria+"&nome="+nome_assistenza+"&fordevices="+response['link_for_devices']);
         },
         error: function(request, error) {
             console.log(request + ":" + error);

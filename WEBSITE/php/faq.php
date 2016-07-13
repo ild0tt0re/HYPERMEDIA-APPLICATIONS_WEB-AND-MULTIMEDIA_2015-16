@@ -5,11 +5,11 @@
 				die();
 			}
 			//connessione al DataBase
-			//$conn=new mysqli("localhost","prova","ciaocane","prima_prova");
-			$conn=new mysqli("localhost","root","","mytim");
+			$conn=new mysqli("localhost","3110366","","my_hyp2016abate7annunziata");
+			//$conn=new mysqli("localhost","root","","mytim");
 			//controllo avvenuta connessione
 			if(mysqli_connect_errno()){
-				$errore = array("nome_assistenza"=>"Problema di connessione al db", "domanda"=>"Problema di connessione al db","risposta"=>"Problema di connessione al db");
+				$errore = array("domanda"=>"Problema di connessione al db","risposta"=>"Problema di connessione al db");
 				die ( json_encode($errore) );
 			}
 			
@@ -17,14 +17,14 @@
 			$nome_assistenza = $conn->real_escape_string( htmlentities($nome_assistenza) );
 			
 			//prendo i dati dalla tabella faq
-			$query="select nome_assistenza, domanda, risposta from faq where nome_assistenza='$nome_assistenza'";
+			$query="SELECT domanda, risposta, punto1, punto2, punto3, punto4, punto5 FROM faq WHERE nome_assistenza='$nome_assistenza'";
 			$result=$conn->query($query);
 			
 			if($result->num_rows > 0){
 				$array_righe = array();
 				
 				while($riga=$result->fetch_array(MYSQL_ASSOC)){
-					//decodifico i campi della tabella che contengono tag html codificati
+					//decodifico i valori presi dalla tabella in quanto si è reso necessario l'uso di Special Entities, questo perché alcuni caratteri speciali (Esempio: apici e doppi apici) generavano errori
 					foreach( $riga as $chiave=>$valore ){
 						$riga[$chiave]=html_entity_decode($valore);
 					}
@@ -33,7 +33,7 @@
 				echo json_encode($array_righe);//esporta in json
 			}
 			else{
-				$not_found = array("nome_assistenza"=>"Assistenza richiesta non trovata", "domanda"=>"Assistenza richiesta non trovata","risposta"=>"Assistenza richiesta non trovata");
+				$not_found = array("domanda"=>"Assistenza richiesta non trovata","risposta"=>"Assistenza richiesta non trovata");
 				echo json_encode($not_found);
 			}
 

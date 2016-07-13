@@ -14,10 +14,30 @@ $("document").ready(function() {
             $(".breadcrumb li:eq(2) a").html(device);
             $("img.media-object").attr("src",response['image']);
             $("h3.media-heading").html(device);
-            $("#caratteristiche").html(""+response['caratteristiche']);
+            
+            var field="";
+            for (var i=1;i<=4;i++){
+                field="caratteristica"+i;
+                if (response[field] != ""){
+                    $("#features").append("<li>"+response[field]+"</li>");
+                }
+                
+                field="titolo_descrizione"+i;
+                if (response[field] != ""){
+                    $("#home").append("<h4>"+response[field]+"</h4><p>"+response['descrizione'+i]+"</p>");
+                }
+                
+            }
             $("#prezzo").html(creaPrezzo(response['vecchio_prezzo'],response['prezzo'],response['rate']));
-            $("#home").html(response['descrizione']);
-            $("#profile").html(response['specifiche']);            
+            
+            for (var i=1;i<=11;i++){
+                field="nome_specifica"+i;
+                if (response[field] != ""){
+                    $(".table-striped").append("<tr><th>"+response[field]+"</th><td>"+response['specifica'+i]+"</td></tr>");
+                }
+                
+            }
+                        
         },
         error: function(request, error) {
             console.log(request + ":" + error);

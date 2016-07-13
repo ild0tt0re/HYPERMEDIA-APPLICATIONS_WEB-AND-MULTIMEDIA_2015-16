@@ -56,10 +56,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">HOME <span class="sr-only">(current)</span></a></li>
-                    <li class="active"><a href="multiple-group-of-topic.html">PRODOTTI</a></li>
-                    <li><a href="#">ASSISTENZA</a></li>
-                    <li><a href="#">SMART LIFE</a></li>
-                    <li><a href="#">PROMOZIONI</a></li>
+                    <li><a href="got.html?gruppo=Prodotti">PRODOTTI</a></li>
+                    <li><a href="got.html?gruppo=Assistenza">ASSISTENZA</a></li>
+                    <li><a href="got.html?gruppo=Smart Life">SMART LIFE</a></li>
+                    <li><a href="promotions.html">PROMOZIONI</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
@@ -72,7 +72,7 @@
         <li><a href="#"> Gruppo</a></li>
         <li><a href="#">Categoria</a></li>
         <li><a href="#">Topic</a></li>
-        <li><a href="#">For Devices</a></li>
+        <li><a>For Devices</a></li>
     </ol>
 </div>
 
@@ -93,6 +93,7 @@
                                 <div class="media-body">
                                     <h4 id="nome1" class="media-heading">Modem e Networking</h4>
                                     <p id="prezzo1">Tutto ciò che ti serve per navigare in Internet</p>
+                                    <p id="intro1"></p>
                                 </div>
                                 <!-- Large button group -->
                                 <a class="link1" href="#">
@@ -112,6 +113,7 @@
                                 <div class="media-body">
                                     <h4 id="nome2" class="media-heading">Modem e Networking</h4>
                                     <p id="prezzo2">Tutto ciò che ti serve per navigare in Internet</p>
+                                    <p id="intro2"></p>
                                 </div>
                                 <!-- Large button group -->
                                 <a class="link2">
@@ -131,6 +133,7 @@
                                 <div class="media-body">
                                     <h4 id="nome3" class="media-heading">Modem e Networking</h4>
                                     <p id="prezzo3">Tutto ciò che ti serve per navigare in Internet</p>
+                                    <p id="intro3"></p>
                                 </div>
                                 <!-- Large button group -->
                                 <a class="link3">
@@ -154,6 +157,7 @@
                                 <div class="media-body">
                                     <h4 id="nome4" class="media-heading">Modem e Networking</h4>
                                     <p id="prezzo4">Tutto ciò che ti serve per navigare in Internet</p>
+                                    <p id="intro4"></p>
                                 </div>
                                 <!-- Large button group -->
                                 <a class="link4">
@@ -175,6 +179,7 @@
                                 <div class="media-body">
                                     <h4 id="nome5" class="media-heading">Modem e Networking</h4>
                                     <p id="prezzo5">Tutto ciò che ti serve per navigare in Internet</p>
+                                    <p id="intro5"></p>
                                 </div>
                                 <!-- Large button group -->
                                 <a class="link5">
@@ -196,6 +201,7 @@
                                 <div class="media-body">
                                     <h4 id="nome6" class="media-heading">Modem e Networking</h4>
                                     <p id="prezzo6">Tutto ciò che ti serve per navigare in Internet</p>
+                                    <p id="intro6"></p>
                                 </div>
                                 <!-- Large button group -->
                                 <a class="link6">
@@ -219,6 +225,7 @@
                                 <div class="media-body">
                                     <h4 id="nome7" class="media-heading">Modem e Networking</h4>
                                     <p id="prezzo7">Tutto ciò che ti serve per navigare in Internet</p>
+                                    <p id="intro7"></p>
                                 </div>
                                 <!-- Large button group -->
                                 <a class="link7">
@@ -240,6 +247,7 @@
                                 <div class="media-body">
                                     <h4 id="nome8" class="media-heading">Modem e Networking</h4>
                                     <p id="prezzo8">Tutto ciò che ti serve per navigare in Internet</p>
+                                    <p id="intro8"></p>
                                 </div>
                                 <!-- Large button group -->
                                 <a class="link8">
@@ -261,6 +269,7 @@
                                 <div class="media-body">
                                     <h4 id="nome9" class="media-heading">Modem e Networking</h4>
                                     <p id="prezzo9">Tutto ciò che ti serve per navigare in Internet</p>
+                                    <p id="intro9"></p>
                                 </div>
                                 <!-- Large button group -->
                                 <a class="link9">
@@ -289,14 +298,17 @@
 <script src="js/vendor/bootstrap.min.js"></script>
 
 <script src="js/getVariables.js" type="text/javascript"></script>
-<script src="js/for_devices2assistenza.js" type="text/javascript"></script>
-<script type="text/javascript">
-    if (getVariableFromPosition(0) == "Assistenza") {
+<script src="js/focus_on_navbar.js" type="text/javascript"></script>
+<script src="js/for_devices2assistance.js" type="text/javascript"></script>
+<script src="js/for_devices1smart_life.js" type="text/javascript"></script>
+<script type="text/javascript">    
+    if(getVariableFromPosition(0)=="Assistenza"){
         console.log("Invoco for device di assistenza");
-        loadForDevicesAssistenza();
+        loadForDevicesAssistance();
     }
-    else {
+    else{
         console.log("For Devices Di Smart Life");
+        loadForDevicesSmartLife();
     }
 </script>
 </body>
