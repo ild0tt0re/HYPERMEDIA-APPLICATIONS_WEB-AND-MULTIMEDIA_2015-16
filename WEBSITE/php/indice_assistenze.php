@@ -6,8 +6,8 @@
 			}
 			
 			//connessione al DataBase
-			//$conn=new mysqli("localhost","prova","ciaocane","prima_prova");
-			$conn=new mysqli("localhost","root","","mytim");
+			$conn=new mysqli("localhost","3110366","","my_hyp2016abate7annunziata");
+			//$conn=new mysqli("localhost","root","","mytim");
 			//controllo avvenuta connessione
 			if(mysqli_connect_errno()){
 				$errore = array("nome_assistenza"=>"Errore DataBase");

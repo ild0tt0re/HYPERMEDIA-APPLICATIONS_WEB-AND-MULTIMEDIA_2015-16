@@ -615,7 +615,7 @@ main.transition-act {
 }
 
 .topic-sl section .media {
-    background-image: url("../img/tim-vision-bg.png");
+/*    background-image: url("../img/tim-vision-bg.png");*/
     background-size: cover;
     padding: 20px;
 }

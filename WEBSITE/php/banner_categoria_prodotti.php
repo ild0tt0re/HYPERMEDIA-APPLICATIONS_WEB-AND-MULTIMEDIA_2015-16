@@ -6,8 +6,8 @@
 				die();
 			}
 			//connessione al DataBase
-			//$conn=new mysqli("localhost","prova","ciaocane","prima_prova");
-			$conn=new mysqli("localhost","root","","mytim");
+			$conn=new mysqli("localhost","3110366","","my_hyp2016abate7annunziata");
+			//$conn=new mysqli("localhost","root","","mytim");
 			//controllo avvenuta connessione
 			if(mysqli_connect_errno()){
 				$errore = array("banner"=>"DB Connection Problem", "intro_banner"=>" ");
@@ -25,7 +25,7 @@
 				//ho una sola riga della tabella banner_prodotti che ha $categoria_prodotti specificata (è infatti la chiave primaria)
 				$riga=$result->fetch_array(MYSQL_ASSOC);
 				
-				//decodifico i campi della tabella che contengono tag html codificati e/o caratteri speciali quali lettere accentate e apici
+				//decodifico i valori presi dalla tabella in quanto si è reso necessario l'uso di Special Entities, questo perché alcuni caratteri speciali (Esempio: apici e doppi apici) generavano errori
 				foreach( $riga as $chiave=>$valore ){
 					$riga[$chiave]=html_entity_decode($valore);
 				}

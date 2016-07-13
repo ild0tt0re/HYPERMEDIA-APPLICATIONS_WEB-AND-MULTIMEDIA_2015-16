@@ -9,9 +9,8 @@ $("document").ready(function() {
         },
         success: function(response) {
             for (var i in response){
-                console.log("categoria="+response[i].categoria+"  nome smart life= "+response[i].nome)
-                $("#smart-list").append("<li>Servizio Smart Life -> "+response[i].nome+"</li>");
-                //TO DO link verso il servizio Smart Life corretto
+                var nome_smart_life = ""+response[i].nome;
+                $("#smart-list").append("<li>Servizio Smart Life -> <a href='topic-sl.html?gruppo=Smart Life&categoria="+response[i].categoria+"&nome="+nome_smart_life+"'>"+nome_smart_life+"</a></li>");
             }  
         },
         error: function(request, error) {

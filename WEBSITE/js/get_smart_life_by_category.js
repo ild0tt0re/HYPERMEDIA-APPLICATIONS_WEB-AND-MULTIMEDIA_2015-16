@@ -2,8 +2,6 @@ function loadSmartLife(){
     $("document").ready(function() {
         var i;
         var contatore=1;
-        var attr_href;
-        //var devices = new Array();
 
         $.ajax({
             method: "POST",
@@ -14,7 +12,7 @@ function loadSmartLife(){
                 categoria: getVariableFromPosition(1),//seconda variabile del GET => categoria
             },
             success: function(response) {
-                var query_string="?gruppo="+getVariableFromPosition(0)+"&categoria="+getVariableFromPosition(1)+"&id=";
+                var smart_life_link="topic-sl.html?gruppo="+getVariableFromPosition(0)+"&categoria="+getVariableFromPosition(1)+"&nome=";
                 $(".breadcrumb li:eq(0) a").html(getVariableFromPosition(0));
                 $(".breadcrumb li:eq(0) a").attr("href","got.html?gruppo="+getVariableFromPosition(0));
                 var nome_categoria = "";
@@ -22,8 +20,7 @@ function loadSmartLife(){
                 $(".breadcrumb li:eq(1) a").html(nome_categoria);
 
                 for (i in response){
-    //                attr_href=$(".link"+contatore).attr("href");
-    //                $(".link"+contatore).attr("href",""+attr_href+query_string+response[i].id_device);
+                    $(".link"+contatore).attr("href",smart_life_link+response[i].nome);
                     $("#nome"+contatore).html(""+response[i].nome);
                     $("#image"+contatore).attr("src",response[i].image);
                     $("#intro"+contatore).html(""+response[i].intro);
