@@ -30,10 +30,10 @@
                     <li role="presentation"><a href="#">Gruppo Telecom Italia</a></li>
                 </ul>
             </div>
-            <div class="pull-right">
+            <div class="pull-right cart">
 
                 <p class="cart-icon"><span class="glyphicon glyphicon-shopping-cart flip-image"
-                                           aria-hidden="true"></span> <span class="cart-p">Carrello</span></p>
+                                           aria-hidden="true"></span> <span class="cart-p hidden-xs">Carrello</span></p>
             </div>
         </div>
     </div>
@@ -76,9 +76,9 @@
 
 
 <!-- Head-Banner  -->
-<div class="row">
+<div class="row header-container">
     <div class="col-md-5 head-banner-left">
-        <h2 id="titolo"></h2>
+        <h2 id="titolo" class="hidden-xs"></h2>
         <p id="intro_banner">Smartphone</p>
     </div>
     <div class="col-md-7 head-banner-right no-padding">
@@ -87,7 +87,11 @@
 </div>
 
 <!-- Sub-Nav -->
-<div class="subnav-container">
+<!-- Subnav only xs - collapse -->
+<a class="btn btn-primary btn-block remove-border-radius visible-xs" role="button" data-toggle="collapse" href="#collapse-subnav" aria-expanded="false" aria-controls="collapseExample">
+    Menu
+</a>
+<div id="collapse-subnav" class="subnav-container collapse">
     <div class="container">
         <div class="row sub-nav">
             <ul class="nav nav-pills nav-justified">
@@ -108,6 +112,31 @@
         </div>
     </div>
 </div>
+
+<!--Subnav From-md-->
+<div class="subnav-container hidden-xs">
+    <div class="container">
+        <div class="row sub-nav">
+            <ul class="nav nav-pills nav-justified">
+                <li role="presentation"><a class="link1"><span
+                        class="glyphicon glyphicon-phone"></span>
+                    <p class="categoria1"></p></a></li>
+                <li role="presentation"><a class="link2"><span class="glyphicon glyphicon-folder-close"></span>
+                    <p class="categoria2"></p></a></li>
+                <li role="presentation"><a class="link3"><span class="glyphicon glyphicon-hdd"></span>
+                    <p class="categoria3"></p></a>
+                </li>
+                <li role="presentation"><a class="link4"><span class="glyphicon glyphicon-film"></span>
+                    <p class="categoria4"></p></a>
+                </li>
+                <li role="presentation"><a class="link5"><span class="glyphicon glyphicon-tags"></span>&nbsp <p
+                        class="categoria5"></p></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 <main>
     <div class="container got">
         <!--row of columns -->
