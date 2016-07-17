@@ -19,7 +19,7 @@ $("document").ready(function() {
                 if (response[i].rate != null){
                     rate=" a rate di "+response[i].rate+"€/mese"
                 }
-                $(".caption p").eq(counter).html("<span class='sconto' >"+response[i].vecchio_prezzo+"</span> "+response[i].prezzo+rate);
+                $(".caption p").eq(counter).html("<span class='scontato' >"+response[i].vecchio_prezzo+"</span> "+response[i].prezzo+rate);
                 $(".caption a").eq(counter).attr("href","topic-device.html?gruppo=Prodotti&categoria=Smartphone e Telefoni&id="+response[i].id_device);
                 counter++;
             }
