@@ -26,7 +26,8 @@ $("document").ready(function() {
                 categorie[i]=response["categoria"+(i+1)];
                 immagini_categorie[i]=response["image"+(i+1)];
                 intro_categorie[i]=response["intro"+(i+1)];
-                $("ul.nav-justified li:eq(" +i+ ") span").addClass(""+response['icona'+(i+1)]);
+                //$("ul.nav-justified li:eq(" +i+ ") span").addClass(""+response['icona'+(i+1)]);
+                $(".icon"+i).addClass(""+response['icona'+(i+1)]);
             }
             
             if(nome_gruppo=="Prodotti"){
@@ -44,11 +45,13 @@ $("document").ready(function() {
                     $("#intro"+(i+1)).html(""+intro_categorie[i]);
                 }
                 else{
+                    $(".categoria5").html(""+categorie[4]);
                     $(".col-md-6").eq(i).hide();//nascondo un elemento della classe .col-md-6 (sezione con immagine, categoria e introduzione)
                     //Nel gruppo assistenza nel DB per la categoria IN EVIDENZA è presente solo il campo intro corrispondente
                     //che va posizionato in un apposito <a id="in-evidenza"> </a>
                     if (intro_categorie[i]!=""){
                         $("#in-evidenza").html(""+intro_categorie[i]);
+                        $("#in-evidenza").css("color","gray");
                     }
                 }
             }

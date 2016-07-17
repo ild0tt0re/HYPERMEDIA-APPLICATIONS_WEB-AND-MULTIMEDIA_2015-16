@@ -301,7 +301,10 @@
 <script src="js/focus_on_navbar.js" type="text/javascript"></script>
 <script src="js/for_devices2assistance.js" type="text/javascript"></script>
 <script src="js/for_devices1smart_life.js" type="text/javascript"></script>
-<script type="text/javascript">    
+<script type="text/javascript">   
+    sessionStorage.setItem("tipo_servizio",getVariableFromPosition(0));
+    sessionStorage.setItem("servizio",getVariableFromPosition(2));
+    
     if(getVariableFromPosition(0)=="Assistenza"){
         console.log("Invoco for device di assistenza");
         loadForDevicesAssistance();

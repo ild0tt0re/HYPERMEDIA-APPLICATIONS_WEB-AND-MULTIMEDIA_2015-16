@@ -17,8 +17,10 @@ $("document").ready(function() {
             $("#string-price").html(""+response['stringa_prezzo']);
             $("#topic-content").html(response['contenuti']);
             $(".topic-sl section .media").css("background-image", 'url("' + response.image_contenuti + '")');
-            var string_fordevices = $("#link-for-devices").text();
-            $("#link-for-devices").attr("href","transition-act.html?gruppo=Smart Life&categoria="+getVariableFromPosition(1)+"&nome="+getVariableFromPosition(2)+"&fordevices="+string_fordevices);
+            
+            $("#title-for-devices").html(""+response['titolo_devices']);
+            $("#link-for-devices").html(""+response['link_devices'])
+            $("#link-for-devices").attr("href","transition-act.html?gruppo=Smart Life&categoria="+getVariableFromPosition(1)+"&nome="+getVariableFromPosition(2)+"&fordevices="+response['link_devices']);
             //TO DO regole e attivazione
         },
         error: function(request, error) {
