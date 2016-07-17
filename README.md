@@ -17,7 +17,6 @@ Lato Client:
 - HTML5
     - HTML5 boilerplate
 - CSS3
-    - SASS preprocessor
 - JavaScript
     - jQuery
 ```
