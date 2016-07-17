@@ -18,7 +18,7 @@
 			$categoria = $conn->real_escape_string( htmlentities($categoria) );
 			
 			//prendo i dati dalla tabella device
-			$query="select id_device, marca, nome, image, prezzo, rate, vecchio_prezzo from device where categoria='$categoria'";
+			$query="select id_device, filtro, marca, nome, image, prezzo, rate, vecchio_prezzo from device where categoria='$categoria'";
 			$result=$conn->query($query);
 			
 			if($result->num_rows > 0){

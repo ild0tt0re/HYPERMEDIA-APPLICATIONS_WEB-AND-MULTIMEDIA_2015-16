@@ -28,6 +28,7 @@ $("document").ready(function() {
                 $("#nome"+contatore).html(""+response[i].marca+" "+response[i].nome);
                 $("#image"+contatore).attr("src",response[i].image);
                 $("#prezzo"+contatore).html(creaPrezzo(response[i].vecchio_prezzo,response[i].prezzo,response[i].rate));
+                $(".col-md-4.card").eq(contatore-1).addClass(""+response[i].filtro);
                 contatore++;
                 
             }

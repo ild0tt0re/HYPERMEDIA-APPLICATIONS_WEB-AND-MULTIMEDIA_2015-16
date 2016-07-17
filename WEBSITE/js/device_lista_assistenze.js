@@ -10,8 +10,10 @@ $("document").ready(function() {
         success: function(response) {
             var nome_assistenza="";
             for (var i in response){
-                nome_assistenza+=response[i].nome;
-                $("#assistenza-list").append("<li>Servizio di Assistenza -> <a href='topic-assistance.html?gruppo=Assistenza&categoria="+response[i].categoria+"&nome="+nome_assistenza+"'>"+nome_assistenza+"</a></li>");
+                nome_assistenza=""+response[i].nome;
+                if (nome_assistenza!="undefined"){
+                    $("#assistenza-list").append("<li>Servizio di Assistenza -> <a href='topic-assistance.html?gruppo=Assistenza&categoria="+response[i].categoria+"&nome="+nome_assistenza+"'>"+nome_assistenza+"</a></li>");
+                }
             }  
         },
         error: function(request, error) {

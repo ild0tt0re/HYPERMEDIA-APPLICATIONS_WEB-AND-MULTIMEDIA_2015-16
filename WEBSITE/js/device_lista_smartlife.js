@@ -8,9 +8,12 @@ $("document").ready(function() {
             id_device: getVariableFromPosition(2),//terza variabile => ID del device
         },
         success: function(response) {
+            var nome_smart_life="";
             for (var i in response){
-                var nome_smart_life = ""+response[i].nome;
-                $("#smart-list").append("<li>Servizio Smart Life -> <a href='topic-sl.html?gruppo=Smart Life&categoria="+response[i].categoria+"&nome="+nome_smart_life+"'>"+nome_smart_life+"</a></li>");
+                nome_smart_life = ""+response[i].nome;
+                if(nome_smart_life!="undefined"){
+                    $("#smart-list").append("<li>Servizio Smart Life -> <a href='topic-sl.html?gruppo=Smart Life&categoria="+response[i].categoria+"&nome="+nome_smart_life+"'>"+nome_smart_life+"</a></li>");
+                }
             }  
         },
         error: function(request, error) {
