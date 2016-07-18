@@ -6,6 +6,10 @@
  * GENERAL
  * ---------------------------------*/
 
+.fa {
+    margin-right: 10px;
+}
+
 .text-outline {
     color: white;
     text-shadow: -1px -1px 0 #000,
@@ -296,9 +300,11 @@ footer {
  * GOT - Group Of Topic
  * ---------------------------------*/
 
-.nav.nav-pills {
-    justify-content: space-between;
-    display: flex;
+@media (min-width: 768px) {
+    .nav.nav-pills {
+        justify-content: space-between;
+        display: flex;
+    }
 }
 
 .breadcrumb {
@@ -509,6 +515,16 @@ footer {
     height: 400px;
 }
 
+.topic-head .topic-image{
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.topic-head .topic-speck{
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .media-quick-description {
     margin-top: 10px;
 }
@@ -539,7 +555,13 @@ footer {
 }
 
 .topic-description {
-    margin: 80px;
+    margin: 35px 10px 10px;
+}
+
+@media (min-width: 768px) {
+    .topic-description {
+        margin: 80px;
+    }
 }
 
 .topic-description .tab-pane {
@@ -766,6 +788,6 @@ main.who-we-are {
     font-size: inherit;
 }
 
-.who-we-are #contact-us .media.media-content{
+.who-we-are #contact-us .media.media-content {
     margin-top: 44px;
 }
