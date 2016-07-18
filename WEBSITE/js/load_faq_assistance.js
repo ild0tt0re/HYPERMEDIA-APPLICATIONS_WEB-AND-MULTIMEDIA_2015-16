@@ -14,7 +14,6 @@ $(document).ready(function() {
         success: function(response) {
 
             for (i in response){
-                //console.log("i="+i+" domanda="+response[i].domanda+" risposta="+response[i].risposta);
                 $(".text-panel-title").eq(counter).after(""+response[i].domanda);
                 $(".panel-body-paragraph").eq(counter).html(""+response[i].risposta);
                 row=response[i];
