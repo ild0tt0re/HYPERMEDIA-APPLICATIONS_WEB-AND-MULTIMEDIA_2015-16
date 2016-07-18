@@ -1,4 +1,4 @@
-$("document").ready(function() {
+$(document).ready(function() {
     var i;
     var counter=0;
     //ajax call for the devices in promotions

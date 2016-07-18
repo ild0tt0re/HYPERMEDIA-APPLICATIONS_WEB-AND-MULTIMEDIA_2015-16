@@ -1,4 +1,4 @@
-$("document").ready(function() {
+$(document).ready(function() {
     $(".btn-default").on("click",handlerTutti);
     $("#filtro1 input:checkbox").change(handler1);
     $("#filtro2 input:checkbox").change(handler2);

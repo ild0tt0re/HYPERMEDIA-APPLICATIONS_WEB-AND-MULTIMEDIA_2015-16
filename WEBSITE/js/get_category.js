@@ -1,4 +1,4 @@
-$("document").ready(function() {
+$(document).ready(function() {
     var i;
     var categorie = new Array(5);
     var immagini_categorie= new Array(5);

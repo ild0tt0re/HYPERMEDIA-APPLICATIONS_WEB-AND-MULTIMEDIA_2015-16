@@ -1,5 +1,5 @@
 function loadAssistenza(){
-    $("document").ready(function() {
+    $(document).ready(function() {
         var i;
         var contatore=1;
 
