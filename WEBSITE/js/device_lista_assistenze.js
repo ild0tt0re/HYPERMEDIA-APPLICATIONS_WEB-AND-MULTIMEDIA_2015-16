@@ -3,7 +3,7 @@ $(document).ready(function() {
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/indice_assistenze.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/indice_assistenze.php",
         data: {
             id_device: getVariableFromPosition(2),
         },

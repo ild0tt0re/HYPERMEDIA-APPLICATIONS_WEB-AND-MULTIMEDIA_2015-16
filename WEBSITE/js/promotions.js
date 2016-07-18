@@ -6,7 +6,7 @@ $(document).ready(function() {
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/devices_in_promotion.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/devices_in_promotion.php",
         
         success: function(response) {
 
@@ -35,7 +35,7 @@ $(document).ready(function() {
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/smart_life_in_promotion.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/smart_life_in_promotion.php",
         
         success: function(response) {
 

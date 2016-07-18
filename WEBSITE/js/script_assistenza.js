@@ -3,7 +3,7 @@ $(document).ready(function() {
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/assistenza.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/assistenza.php",
         data: {
             nome_assistenza: getVariableFromPosition(2),//terza variabile del GET => nome del servizio di Assistenza
         },

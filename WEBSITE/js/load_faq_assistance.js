@@ -7,7 +7,7 @@ $(document).ready(function() {
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/faq.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/faq.php",
         data: {
             nome_assistenza: getVariableFromPosition(2),//terza variabile del GET => nome del servizio di Assistenza
         },

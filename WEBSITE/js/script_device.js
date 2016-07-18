@@ -3,7 +3,7 @@ $(document).ready(function() {
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/device.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/device.php",
         data: {
             id: getVariableFromPosition(2),//terza variabile del GET => ID del device
         },

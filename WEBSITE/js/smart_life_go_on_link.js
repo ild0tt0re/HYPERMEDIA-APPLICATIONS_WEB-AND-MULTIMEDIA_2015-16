@@ -10,7 +10,7 @@ function goOnHandler(){
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/go_on_smart_life_device.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/go_on_smart_life_device.php",
         data: {
             nome_smart_life: getVariableFromPosition(2),//terza variabile del GET => nome_smart_life
             id_device: sessionStorage.id_device,
