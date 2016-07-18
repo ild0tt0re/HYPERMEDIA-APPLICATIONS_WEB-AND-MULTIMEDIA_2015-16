@@ -10,7 +10,7 @@ $("document").ready(function() {
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/gruppo.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/gruppo.php",
         data: {
             gruppo: getVariableFromPosition(0),//prima variabile del get => nome del gruppo
         },
