@@ -21,7 +21,15 @@ $(document).ready(function() {
             $("#title-for-devices").html(""+response['titolo_devices']);
             $("#link-for-devices").html(""+response['link_devices'])
             $("#link-for-devices").attr("href","transition-act.html?gruppo=Smart Life&categoria="+getVariableFromPosition(1)+"&nome="+getVariableFromPosition(2)+"&fordevices="+response['link_devices']);
-            //TO DO regole e attivazione
+            
+            $("#rules h2").html(""+response['nome']+" - Attivazione e Regole");
+            $("#rules p").html(""+response['regole']);
+            if (response['nota_regole']!= ""){
+                $("#rules div span").html(""+response['nota_regole']);
+            }
+            else{
+                $("#rules div").hide();
+            }
         },
         error: function(request, error) {
             console.log(request + ":" + error);
