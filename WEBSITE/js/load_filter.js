@@ -3,7 +3,7 @@ $(document).ready(function() {
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/load_filter.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/load_filter.php",
         data: {
             categoria_device: getVariableFromPosition(1),//seconda variabile => Categoria device
         },

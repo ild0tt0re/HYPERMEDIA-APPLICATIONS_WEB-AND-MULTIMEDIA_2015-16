@@ -16,7 +16,7 @@ function handlerSmartLife(){
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/go_on_transition_sl.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/go_on_transition_sl.php",
         data: {
             nome_smart_life: sessionStorage.servizio,
             id_device: getVariableFromPosition(2),//terza variabile del GET => ID del device
@@ -40,7 +40,7 @@ function handlerAssistenza(){
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/go_on_transition_assistance.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/go_on_transition_assistance.php",
         data: {
             nome_assistenza: sessionStorage.servizio,
             id_device: getVariableFromPosition(2),//terza variabile del GET => ID del device

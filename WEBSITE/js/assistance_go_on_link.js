@@ -10,7 +10,7 @@ function goOnHandler(){
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/go_on_assistance_device.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/go_on_assistance_device.php",
         data: {
             nome_assistenza: getVariableFromPosition(2),//terza variabile del GET => nome_assistenza
             id_device: sessionStorage.id_device,

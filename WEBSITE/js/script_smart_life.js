@@ -3,7 +3,7 @@ $(document).ready(function() {
         method: "POST",
         dataType: "json",
         crossDomain: true,
-        url: "php/smart_life.php",
+        url: "http://hyp2016abate7annunziata.altervista.org/php/smart_life.php",
         data: {
             nome_smart_life: getVariableFromPosition(2),//terza variabile del GET => nome smart life
         },
