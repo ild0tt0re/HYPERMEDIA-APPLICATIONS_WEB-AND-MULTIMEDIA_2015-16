@@ -1,7 +1,7 @@
 sessionStorage.setItem("id_device", getVariableFromPosition(2));
 $("#go-on-link").hide();
 
-$("document").ready(function() {
+$(document).ready(function() {
     if(sessionStorage.tipo_servizio=="Smart Life"){
         handlerSmartLife();
     }

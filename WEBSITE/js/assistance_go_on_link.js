@@ -1,6 +1,6 @@
 $("#go-on-link").hide();
 
-$("document").ready(function() {
+$(document).ready(function() {
     goOnHandler();
     return false;
 });
