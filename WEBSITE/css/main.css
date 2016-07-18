@@ -6,6 +6,10 @@
  * GENERAL
  * ---------------------------------*/
 
+.cursor-disable{
+    cursor: not-allowed;
+}
+
 #go-on-link {
     float: right;
 }
@@ -24,7 +28,7 @@
     }
 }
 
-.sconto {
+.scontato {
     color: red;
     text-decoration: line-through;
 }
@@ -284,6 +288,11 @@ footer {
  * GOT - Group Of Topic
  * ---------------------------------*/
 
+.nav.nav-pills{
+    justify-content: space-between;
+    display: flex;
+}
+
 .breadcrumb {
     margin-top: 13px;
     margin-bottom: 10px;
@@ -388,7 +397,7 @@ footer {
     border: 1px solid #eee;
     margin: 4px;
     box-shadow: 0 0 5px 2px #eee;
-    padding: 10px 10px 0;
+    padding: 10px 10px 10px;
 }
 
 .card section img {
@@ -563,6 +572,7 @@ a {
 
 .carousel-promo .item.active {
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 .item.active .col-sm-3 {
@@ -594,12 +604,12 @@ a {
 
 /* Thumbnail Box */
 .caption h4 {
-    font-size: 1.25rem;
+    font-size: 1.60rem;
     color: #444;
 }
 
 .caption p {
-    font-size: 0.85rem;
+    font-size: 1.80rem;
     color: #999;
 }
 
@@ -630,7 +640,7 @@ a {
 }
 
 .carousel-control.right {
-    right: 0px;
+    right: 4px;
 }
 
 /* Mobile Only */
