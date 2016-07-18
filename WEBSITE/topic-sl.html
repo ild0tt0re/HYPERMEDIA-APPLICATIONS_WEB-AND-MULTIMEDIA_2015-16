@@ -79,45 +79,58 @@
 
 <main>
     <div class="container topic-sl">
-        <!-- Example row of columns -->
+        <!-- row of columns -->
         <div class="row row-eq-height">
             <div class="col-md-3 menu-left">
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Descrizione</a>
-                    <a href="#" class="list-group-item">Attivazione e Regole</a>
+                    <a href="#description" class="list-group-item active" data-toggle="tab">Descrizione</a>
+                    <a href="#rules" class="list-group-item" data-toggle="tab">Attivazione e Regole</a>
                 </div>
             </div>
-            <div class="col-md-9 card">
-                <div class="row">
-                    <div class="media media-content">
-                        <div class="media-left">
-                            <img class="media-object" id="image-topic">
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading sl-name"></h4>
-                            <p id="topic-description"></p>
-                            <p id="string-price"></p>
-                            <input class="btn btn-default cursor-disable" type="button" value="Aggiungi al Carrello">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <section>
-                        <div class="media">
-                            <div class="media-body text-outline">
-                                <h4 class="media-heading">Contenuti</h4>
-                                <p id="topic-content"></p>
+            <div class="col-md-9 card tab-content">
+                <div class="tab-pane active" id="description">
+                    <div class="row">
+                        <div class="media media-content">
+                            <div class="media-left">
+                                <img class="media-object" id="image-topic">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading sl-name"></h4>
+                                <p id="topic-description"></p>
+                                <p id="string-price"></p>
+                                <input class="btn btn-default cursor-disable" type="button"
+                                       value="Aggiungi al Carrello">
                             </div>
                         </div>
-                    </section>
+                    </div>
+                    <div class="row">
+                        <section>
+                            <div class="media">
+                                <div class="media-body text-outline ">
+                                    <h4 class="media-heading">Contenuti</h4>
+                                    <p id="topic-content"></p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
+                <div class="tab-pane" id="rules">
+                    <h2>TIM-Vision - Attivazione e Regole</h2>
+                    <p>Abbonati a Tim Vision per goderti un grande spettacolo. Puoi vedere oltre 8'000 titoli tra
+                        Cartoni, Cinema e Serie TV, documentari e gli ultimi 7 giorni di La7 e La7d. Se ti abboni entro
+                        il 30/06/2016, il primo mese e' gratis e poi 5€/mese.</p>
+                    <div class="alert alert-danger" role="alert">
+                        <span>Per usufruire di TIM-Vision devi già essere nostro cliente con ADSL Telecom.</span>
+                    </div>
+                </div>
+
                 <!-- link for_devices_smart_life -->
                 <br>
                 <h4 id="title-for-devices" class="media-heading"><span class="sl-name"></span></h4>
                 <a id="link-for-devices"><p></p></a>
+
             </div>
         </div>
-
 
         <hr>
     </div> <!-- /container -->
@@ -134,6 +147,7 @@
 
 <script src="js/vendor/bootstrap.min.js"></script>
 
+<script src="js/topic-sl.js" type="text/javascript"></script>
 <script src="js/getVariables.js" type="text/javascript"></script>
 <script src="js/script_smart_life.js" type="text/javascript"></script>
 <script src="js/smart_life_go_on_link.js" type="text/javascript"></script>
