@@ -1,13 +1,12 @@
 $("document").ready(function() {
-    $("#filtro0 input:checkbox").change(handlerTutti);
+    $(".btn-default").on("click",handlerTutti);
     $("#filtro1 input:checkbox").change(handler1);
     $("#filtro2 input:checkbox").change(handler2);
     $("#filtro3 input:checkbox").change(handler3);
     $("#filtro4 input:checkbox").change(handler4);
 });
       
-function handlerTutti(){
-    console.log("ciao");
+function handlerTutti(event){
     location.reload();
 }
 
