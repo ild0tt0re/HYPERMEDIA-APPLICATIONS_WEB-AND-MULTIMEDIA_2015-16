@@ -765,3 +765,7 @@ main.who-we-are {
 .who-we-are .tab-pane .caption p {
     font-size: inherit;
 }
+
+.who-we-are #contact-us .media.media-content{
+    margin-top: 44px;
+}
