@@ -7,7 +7,7 @@ function loadSmartLife(){
             method: "POST",
             dataType: "json",
             crossDomain: true,
-            url: "php/smart_life_by_category.php",
+            url: "http://hyp2016abate7annunziata.altervista.org/php/smart_life_by_category.php",
             data: {
                 categoria: getVariableFromPosition(1),//seconda variabile del GET => categoria
             },

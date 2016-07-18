@@ -7,7 +7,7 @@ function loadForDevicesAssistance(){
             method: "POST",
             dataType: "json",
             crossDomain: true,
-            url: "php/for_device2as.php",
+            url: "http://hyp2016abate7annunziata.altervista.org/php/for_device2as.php",
             data: {
                 nome_assistenza: getVariableFromPosition(2),//terza variabile del GET => nome_assistenza
             },
