@@ -24,12 +24,7 @@ $(document).ready(function() {
             
             $("#rules h2").html(""+response['nome']+" - Attivazione e Regole");
             $("#rules p").html(""+response['regole']);
-            if (response['nota_regole']!= ""){
-                $("#rules div span").html(""+response['nota_regole']);
-            }
-            else{
-                $("#rules div").hide();
-            }
+            $("#rules div span").html(""+response['nota_regole']);
         },
         error: function(request, error) {
             console.log(request + ":" + error);
