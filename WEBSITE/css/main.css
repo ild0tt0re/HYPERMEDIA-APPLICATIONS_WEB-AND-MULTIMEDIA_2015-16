@@ -58,7 +58,7 @@
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    filter: FlipH;
+    /*filter: FlipH;*/
     -ms-filter: "FlipH";
 }
 
@@ -454,6 +454,11 @@ footer {
 /* ---------------------------------
  * MGOT - Multiple Group Of Topic
  * ---------------------------------*/
+
+.mgot .media-body {
+    display: block;
+}
+
 .card-filter {
     padding-right: 20px;
 }
@@ -502,22 +507,23 @@ footer {
     .nav-justified > li {
         width: 0;
     }
+
+    .mgot .media-body {
+        display: table-cell;
+    }
 }
 
 /* ---------------------------------
  * TOPIC - DEVICE
  * ---------------------------------*/
-.topic-head {
-    display: flex;
-}
 
 .topic-head img {
     height: 400px;
 }
 
 .topic-head .topic-image{
-    padding-left: 0;
-    padding-right: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .topic-head .topic-speck{
@@ -531,6 +537,8 @@ footer {
 
 .media-quick-description h3 {
     margin-bottom: 30px;
+    text-align:  center;
+    margin-top: 30px;
 }
 
 .media-quick-description span {
@@ -538,12 +546,6 @@ footer {
 }
 
 .add-to-cart {
-    position: absolute;
-    bottom: 10px;
-}
-
-.add-to-cart {
-    position: absolute;
     bottom: 20px;
 }
 
@@ -561,6 +563,27 @@ footer {
 @media (min-width: 768px) {
     .topic-description {
         margin: 80px;
+    }
+
+    .topic-head {
+        display: flex;
+    }
+
+    .add-to-cart {
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .topic-head .topic-image{
+        padding-left: 0;
+        padding-right: 10px;
+        display: block;
+    }
+
+    .media-quick-description h3 {
+        margin-bottom: 30px;
+        text-align: left;
+        margin-top: 0;
     }
 }
 
@@ -603,6 +626,10 @@ a {
 .carousel-promo .item.active {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.carousel-promo .item.active .item-container{
+    margin-bottom: 15px;
 }
 
 .item.active .col-sm-3 {
@@ -695,6 +722,7 @@ main.transition-act {
 
 .transition-act .media-body {
     padding: 0 15px;
+    display: block;
 }
 
 .transition-act h2 {
@@ -705,6 +733,12 @@ main.transition-act {
 
 .transition-act h1 {
     margin-bottom: 26px;
+}
+
+@media (min-width: 798px) {
+    .transition-act .media-body {
+        display: table-cell;
+    }
 }
 
 /* ---------------------------------

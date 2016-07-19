@@ -20,6 +20,7 @@ Lato Client:
     - Bootstrap 3
 - JavaScript
     - jQuery
+    - AJAX
 ```
 
 
@@ -28,10 +29,14 @@ Lato Server:
 - APACHE
 - MYSQL
 - PHP
-- AJAX
+```
+
+API
+```
+- Google Maps API
 ```
 
 ### Screenshot
 ![TIM Home](WEBSITE/img/preview/home.png)
 
-[Link: http://hyp2016abate7annunziata.altervista.org/](http://hyp2016abate7annunziata.altervista.org/)
+Link: [http://hyp2016abate7annunziata.altervista.org](http://hyp2016abate7annunziata.altervista.org)
